@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// USER
 Route::get('/', [UserController::class, 'home']);
+
+
+
+// ADMIN
+Route::get('/dashboard', [AdminController::class, 'dashboard']);

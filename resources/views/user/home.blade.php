@@ -1,5 +1,5 @@
 {{-- Import Header --}}
-@include('user.header')
+@include('user.user-header')
 
 <!-- Main Content -->
 <div id="main-content" class="site-main clearfix">
@@ -14,7 +14,7 @@
                                 <!-- Slide 1 -->
                                 <li data-transition="">
                                     <!-- Main Image -->
-                                    <img src="{{ asset('assets/img/penglipuran/penglipuran1.jpg') }}" alt=""
+                                    <img src="{{ asset('user/img/penglipuran/penglipuran1.jpg') }}" alt=""
                                         data-bgposition="center center" data-no-retina>
 
                                     <!-- Layers -->
@@ -78,7 +78,7 @@
                                 <!-- Slide 2 -->
                                 <li data-transition="">
                                     <!-- Main Image -->
-                                    <img src="{{ asset('assets/img/penglipuran/penglipuran2.jpg') }}" alt=""
+                                    <img src="{{ asset('user/img/penglipuran/penglipuran2.jpg') }}" alt=""
                                         data-bgposition="center center" data-no-retina>
 
                                     <!-- Layers -->
@@ -250,4 +250,4 @@
 </div><!-- /#main-content -->
 
 {{-- Import Footer --}}
-@include('user.footer')
+@include('user.user-footer')
