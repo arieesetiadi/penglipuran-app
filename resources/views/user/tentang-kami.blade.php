@@ -37,7 +37,7 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('user/icon/apple-touch-icon-158-precomposed.png') }}">
 
 
-    <title>Home - Desa Penglipuran</title>
+    <title>Tentang kami - Desa Penglipuran</title>
 </head>
 
 <body class="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
@@ -66,7 +66,7 @@
 
                             <nav id="main-nav" class="main-nav">
                                 <ul id="menu-primary-menu" class="menu">
-                                    <li class="menu-item menu-item-has-children current-menu-item">
+                                    <li class="menu-item menu-item-has-children ">
                                         <a href="/">HOME</a>
                                         {{-- <ul class="sub-menu">
                                             <li class="menu-item current-item"><a href="home.html">HOME 1</a></li>
@@ -76,7 +76,7 @@
                                     <li class="menu-item menu-item-has-children ">
                                         <a href="{{ url('tampil-virtual-tour') }}">VIRTUAL TOUR</a>
                                     </li>
-                                    <li class="menu-item menu-item-has-children ">
+                                    <li class="menu-item menu-item-has-children current-menu-item">
                                         <a href="{{ url('tampil-tentang-kami') }}">TENTANG KAMI</a>
                                     </li>
                                     <li class="menu-item menu-item-has-children ">
@@ -103,86 +103,6 @@
                     <div id="site-content" class="site-content clearfix">
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
-                                <!-- SLIDER -->
-                                <div class="rev_slider_wrapper fullwidthbanner-container">
-                                    <div id="rev-slider1" class="rev_slider fullwidthbanner">
-                                        <ul>
-                                            <!-- Slide 1 -->
-                                            <li data-transition="">
-                                                <!-- Main Image -->
-                                                <img src="{{ asset('user/img/penglipuran/penglipuran1.jpg') }}"
-                                                    alt="" data-bgposition="center center" data-no-retina>
-
-                                                <!-- Layers -->
-                                                <div class="tp-caption tp-resizeme text-white font-heading font-weight-600"
-                                                    data-x="['left','left','left','center']"
-                                                    data-hoffset="['34','34','34','0']"
-                                                    data-y="['middle','middle','middle','middle']"
-                                                    data-voffset="['-134','-134','-134','-134']"
-                                                    data-fontsize="['20','20','20','16']"
-                                                    data-lineheight="['70','70','40','24']" data-width="full"
-                                                    data-height="none" data-whitespace="normal"
-                                                    data-transform_idle="o:1;"
-                                                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                                                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                                    data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
-                                                    data-start="700" data-splitin="none" data-splitout="none"
-                                                    data-responsive_offset="on">
-                                                    DESA WISATA PENGLIPURAN
-                                                </div>
-
-                                                <div class="tp-caption tp-resizeme text-white font-heading font-weight-700"
-                                                    data-x="['left','left','left','center']"
-                                                    data-hoffset="['34','34','34','0']"
-                                                    data-y="['middle','middle','middle','middle']"
-                                                    data-voffset="['-63','-63','-63','-63']"
-                                                    data-fontsize="['52','52','42','32']"
-                                                    data-lineheight="['65','65','45','35']" data-width="full"
-                                                    data-height="none" data-whitespace="normal"
-                                                    data-transform_idle="o:1;"
-                                                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                                                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                                    data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
-                                                    data-start="1000" data-splitin="none" data-splitout="none"
-                                                    data-responsive_offset="on">
-                                                    JAGALAH HATI
-                                                </div>
-
-                                                <div class="tp-caption tp-resizeme text-white font-heading font-weight-700"
-                                                    data-x="['left','left','left','center']"
-                                                    data-hoffset="['34','34','34','0']"
-                                                    data-y="['middle','middle','middle','middle']"
-                                                    data-voffset="['2','2','2','2']"
-                                                    data-fontsize="['52','52','42','32']"
-                                                    data-lineheight="['65','65','45','35']" data-width="full"
-                                                    data-height="none" data-whitespace="normal"
-                                                    data-transform_idle="o:1;"
-                                                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                                                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                                    data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
-                                                    data-start="1000" data-splitin="none" data-splitout="none"
-                                                    data-responsive_offset="on">
-                                                    BERSIHKAN PIKIRAN
-                                                </div>
-
-                                                <div class="tp-caption" data-x="['left','left','left','center']"
-                                                    data-hoffset="['34','34','34','0']"
-                                                    data-y="['middle','middle','middle','middle']"
-                                                    data-voffset="['106','106','106','106']" data-width="full"
-                                                    data-height="none" data-whitespace="normal"
-                                                    data-transform_idle="o:1;"
-                                                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                                                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                                                    data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;"
-                                                    data-start="1000" data-splitin="none" data-splitout="none"
-                                                    data-responsive_offset="on">
-                                                </div>
-                                            </li>
-                                            <!-- /End Slide 1 -->
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- END SLIDER -->
 
                                 <!-- ICONBOX -->
                                 <div class="row-iconbox">
@@ -192,7 +112,7 @@
                                                 <div class="themesflat-spacer clearfix" data-desktop="60"
                                                     data-mobile="60" data-smobile="60"></div>
                                                 <div class="themesflat-headings style-1 text-center clearfix">
-                                                    <h2 class="heading">YOUR BEST CHOOSE</h2>
+                                                    <h2 class="heading">HALAMAN TENTANG KAMI</h2>
                                                     <div class="sep has-icon width-125 clearfix">
                                                         <div class="sep-icon">
                                                             <span class="sep-icon-before sep-center sep-solid"></span>

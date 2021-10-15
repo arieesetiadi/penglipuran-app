@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard - Desa Penglipuran</title>
+    <title>Post - Desa Penglipuran</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -59,7 +59,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="{{ url('kelola-post') }}">
                     <i class="far fa-newspaper"></i>
                     <span>Post</span>
