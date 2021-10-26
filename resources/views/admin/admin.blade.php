@@ -60,9 +60,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ url('kelola-post') }}">
+                <a class="nav-link collapsed" href="{{ url('kelola-news') }}">
                     <i class="far fa-newspaper"></i>
-                    <span>Post</span>
+                    <span>News</span>
                 </a>
             </li>
 
@@ -171,7 +171,130 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman Admin</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Admin</h1>
+
+                    {{-- Body --}}
+                    <div class="container-fluid">
+                        {{-- Alert --}}
+                        @if (session('status'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="row d-flex justify-content-between">
+                            {{-- Form input data admin --}}
+                            <div class="col-4">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Input Admin
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="{{ url('tambah-admin') }}" method="POST">
+                                            @csrf
+
+                                            {{-- Input nama --}}
+                                            <div class="form-group">
+                                                <label for="nama">Nama :</label>
+                                                <input name="nama" type="text" class="form-control" id="nama"
+                                                    placeholder="Nama" required>
+                                            </div>
+
+                                            {{-- Input email --}}
+                                            <div class="form-group">
+                                                <label for="email">Email :</label>
+                                                <input name="email" type="email" class="form-control" id="email"
+                                                    placeholder="Email" required>
+                                            </div>
+
+                                            {{-- Input password --}}
+                                            <div class="form-group">
+                                                <label for="password">Password :</label>
+                                                <input name="password" type="password" class="form-control"
+                                                    id="password" placeholder="Password" required>
+                                            </div>
+
+                                            {{-- Input jenis kelamin --}}
+                                            <div class="form-group">
+                                                <label for="jenisKelamin" class="d-block">Jenis Kelamin :</label>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="pria" name="jenisKelamin"
+                                                        class="custom-control-input" value="Pria" checked>
+                                                    <label class="custom-control-label" for="pria">Pria</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="wanita" name="jenisKelamin"
+                                                        class="custom-control-input" value="Wanita">
+                                                    <label class="custom-control-label" for="wanita">Wanita</label>
+                                                </div>
+                                            </div>
+
+                                            {{-- Tombol submit --}}
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Table data admin --}}
+                            <div class="col-8">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Daftar Admin
+                                    </div>
+                                    <div class="card-body" style="overflow-y: scroll; height: 200px;">
+                                        <table class="table table-sm table-hover">
+                                            <tr>
+                                                <th>
+                                                    <p>No</p>
+                                                </th>
+                                                <th>
+                                                    <p>Nama</p>
+                                                </th>
+                                                <th>
+                                                    <p>Email</p>
+                                                </th>
+                                                <th>
+                                                    <p>Dibuat pada</p>
+                                                </th>
+                                                <th>
+                                                    <p>Aksi</p>
+                                                </th>
+                                            </tr>
+                                            @foreach ($admins as $i => $admin)
+                                                <tr>
+                                                    <td>
+                                                        <p>{{ $i + 1 }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->email }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->created_at }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/halaman-ubah-admin/{{ $admin->id }}"
+                                                            class="btn btn-sm btn-white">
+                                                            <i class="fas fa-pen"></i>
+                                                        </a>
+                                                        <a href="/hapus-admin/{{ $admin->id }}"
+                                                            class="btn btn-sm btn-danger">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

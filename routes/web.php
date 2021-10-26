@@ -33,13 +33,19 @@ Route::get('/logout', [LogoutController::class, 'prosesLogout']);
 Route::get('/dashboard', [AdminController::class, 'dashboard']);
 
 // Halaman Post
-Route::get('/kelola-post', [AdminController::class, 'post']);
+Route::get('/kelola-news', [AdminController::class, 'news']);
 
 // Halaman Gallery
 Route::get('/kelola-gallery', [AdminController::class, 'gallery']);
 
-// Halaman Post
+// Halaman admin
 Route::get('/kelola-admin', [AdminController::class, 'admin']);
+Route::post('/tambah-admin', [AdminController::class, 'tambahAdmin']);
+
+Route::post('/ubah-admin', [AdminController::class, 'ubahAdmin']);
+Route::get('/halaman-ubah-admin/{id}', [AdminController::class, 'halamanUbahAdmin']);
+
+Route::get('/hapus-admin/{id}', [AdminController::class, 'hapusAdmin']);
 
 
 

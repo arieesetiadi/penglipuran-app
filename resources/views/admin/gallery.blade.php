@@ -60,9 +60,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ url('kelola-post') }}">
+                <a class="nav-link collapsed" href="{{ url('kelola-news') }}">
                     <i class="far fa-newspaper"></i>
-                    <span>Post</span>
+                    <span>News</span>
                 </a>
             </li>
 
@@ -171,7 +171,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Halaman Gallery</h1>
 
                 </div>
                 <!-- /.container-fluid -->

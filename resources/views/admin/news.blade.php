@@ -60,9 +60,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link collapsed" href="{{ url('kelola-post') }}">
+                <a class="nav-link collapsed" href="{{ url('kelola-news') }}">
                     <i class="far fa-newspaper"></i>
-                    <span>Post</span>
+                    <span>News</span>
                 </a>
             </li>
 

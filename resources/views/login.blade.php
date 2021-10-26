@@ -16,11 +16,11 @@
                 {{-- Gambar Login --}}
                 <div class="shadow">
                     <img src="{{ asset('admin/img/login-penglipuran.jpg') }}" alt="Logo Penglipuran"
-                        class="img-fluid rounded">
+                        class="img-fluid">
                 </div>
             </div>
 
-            <div class="col-6 border rounded shadow-sm d-flex justify-content-center pt-3">
+            <div class="col-6 border shadow-sm d-flex justify-content-center pt-3">
                 {{-- Form Login --}}
                 <div class="w-75">
                     <div class="d-flex justify-content-center my-4">
