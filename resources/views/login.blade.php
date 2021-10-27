@@ -32,9 +32,9 @@
                             @if (session('gagal'))
                                 <small class="text-danger text-center d-block">{{ session('gagal') }}</small>
                             @endif
-                            <label for="username">Username :</label>
-                            <input name="username" type="text" class="form-control form-control-sm" id="username"
-                                placeholder="Username" autofocus required>
+                            <label for="email">Email :</label>
+                            <input name="email" type="email" class="form-control form-control-sm" id="email"
+                                placeholder="Email" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password :</label>

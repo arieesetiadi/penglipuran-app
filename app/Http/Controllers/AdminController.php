@@ -37,9 +37,9 @@ class AdminController extends Controller
     public function admin()
     {
         // Ambil semua data admin, untuk ditampilkan pada table
-        $admins = DB::table('users')->orderBy('id', 'desc')->get();
+        $data['admins'] = DB::table('users')->orderBy('id', 'desc')->get();
 
-        return view('admin.admin', compact('admins'));
+        return view('admin.admin', $data);
     }
 
     // Tambah Admin
@@ -67,19 +67,62 @@ class AdminController extends Controller
     // Halaman Ubah Admin
     public function halamanUbahAdmin($id)
     {
-        dd($id);
+        // Ambil semua data admin, untuk ditampilkan pada table
+        $data['admins'] = DB::table('users')->orderBy('id', 'desc')->get();
+
+        // Ambil data admin yang dipilih
+        $data['admin'] = DB::table('users')->find($id);
+
+        return view('admin.ubah-admin', $data);
     }
 
     // Ubah Admin
     public function ubahAdmin(Request $data)
     {
-        dd($data->all());
+        // Ambil data dari form
+        $id = $data->id;
+        $nama = $data->nama;
+        $email = $data->email;
+        $password = $data->password;
+        $jenisKelamin = $data->jenisKelamin;
+
+        // Jika password kosong, jangan update password
+        if (is_null($password)) {
+            DB::table('users')
+                ->where('id', $id)
+                ->update([
+                    'name' => $nama,
+                    'email' => $email,
+                    'jenis_kelamin' => $jenisKelamin
+                ]);
+        }
+
+        // Jika password diisi, update password
+        else {
+            DB::table('users')
+                ->where('id', $id)
+                ->update([
+                    'name' => $nama,
+                    'email' => $email,
+                    'password' => Hash::make($password),
+                    'jenis_kelamin' => $jenisKelamin
+                ]);
+        }
+
+        // Redirect ke halaman Admin
+        return redirect()->to('/kelola-admin')->with('status', 'Berhasil mengubah data admin');
     }
 
     // Hapus Admin
 
     public function hapusAdmin($id)
     {
-        dd($id);
+        // Hapus admin berdasarkan id
+        DB::table('users')
+            ->where('id', $id)
+            ->delete();
+
+        // Redirect ke halaman Admin
+        return redirect()->to('/kelola-admin')->with('status', 'Berhasil menghapus data admin');
     }
 }

@@ -156,8 +156,14 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <span
                                     class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
-                                <img class="img-profile rounded-circle"
-                                    src="{{ asset('admin/img/avatar/' . auth()->user()->avatar) }}">
+
+                                @if (auth()->user()->jenis_kelamin == 'Pria')
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ asset('admin/img/avatar/male.png') }}">
+                                @else
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ asset('admin/img/avatar/female.png') }}">
+                                @endif
                             </a>
                         </li>
 
@@ -183,7 +189,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Penglipuran 2021</span>
                     </div>
                 </div>
             </footer>

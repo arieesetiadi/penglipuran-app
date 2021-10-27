@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard - Desa Penglipuran</title>
+    <title>Admin - Desa Penglipuran</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{{ url('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -75,7 +75,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ url('kelola-admin') }}">
                     <i class="far fa-user"></i>
                     <span>Admin</span>
@@ -177,7 +177,134 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman Dashboard</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Admin</h1>
+
+                    {{-- Body --}}
+                    <div class="container-fluid">
+                        {{-- Alert --}}
+                        @if (session('status'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="row d-flex justify-content-between">
+                            {{-- Form input data admin --}}
+                            <div class="col-4">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Ubah Admin
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="{{ url('ubah-admin') }}" method="POST">
+                                            @csrf
+                                            {{-- Hidden ID --}}
+                                            <input type="hidden" name="id" value="{{ $admin->id }}">
+
+                                            {{-- Input nama --}}
+                                            <div class="form-group">
+                                                <label for="nama">Nama :</label>
+                                                <input name="nama" type="text" class="form-control" id="nama"
+                                                    placeholder="Nama" value="{{ $admin->name }}" required>
+                                            </div>
+
+                                            {{-- Input email --}}
+                                            <div class="form-group">
+                                                <label for="email">Email :</label>
+                                                <input name="email" type="email" class="form-control" id="email"
+                                                    placeholder="Email" value="{{ $admin->email }}" required>
+                                            </div>
+
+                                            {{-- Input password --}}
+                                            <div class="form-group">
+                                                <label for="password">Password (Optional) :</label>
+                                                <input name="password" type="password" class="form-control"
+                                                    id="password" placeholder="Password">
+                                            </div>
+
+                                            {{-- Input jenis kelamin --}}
+                                            <div class="form-group">
+                                                <label for="jenisKelamin" class="d-block">Jenis Kelamin :</label>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="pria" name="jenisKelamin"
+                                                        class="custom-control-input" value="Pria"
+                                                        {{ $admin->jenis_kelamin == 'Pria' ? 'Checked' : '' }}>
+                                                    <label class="custom-control-label" for="pria">Pria</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="wanita" name="jenisKelamin"
+                                                        class="custom-control-input" value="Wanita"
+                                                        {{ $admin->jenis_kelamin == 'Wanita' ? 'Checked' : '' }}>
+                                                    <label class="custom-control-label" for="wanita">Wanita</label>
+                                                </div>
+                                            </div>
+
+                                            {{-- Tombol submit --}}
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Table data admin --}}
+                            <div class="col-8">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Daftar Admin
+                                    </div>
+                                    <div class="card-body" style="overflow-y: scroll; height: 200px;">
+                                        <table class="table table-sm table-hover">
+                                            <tr>
+                                                <th>
+                                                    <p>No</p>
+                                                </th>
+                                                <th>
+                                                    <p>Nama</p>
+                                                </th>
+                                                <th>
+                                                    <p>Email</p>
+                                                </th>
+                                                <th>
+                                                    <p>Dibuat pada</p>
+                                                </th>
+                                                <th>
+                                                    <p>Aksi</p>
+                                                </th>
+                                            </tr>
+                                            @foreach ($admins as $i => $admin)
+                                                <tr>
+                                                    <td>
+                                                        <p>{{ $i + 1 }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->email }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->created_at }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/halaman-ubah-admin/{{ $admin->id }}"
+                                                            class="btn btn-sm btn-white">
+                                                            <i class="fas fa-pen"></i>
+                                                        </a>
+                                                        <a href="/hapus-admin/{{ $admin->id }}"
+                                                            class="btn btn-sm btn-danger">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

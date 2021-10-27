@@ -21,6 +21,14 @@
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
+
+    <style>
+        th p,
+        td p {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -154,10 +162,17 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link" id="userDropdown" role="" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <span
-                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
-                                <img class="img-profile rounded-circle"
-                                    src="{{ asset('admin/img/avatar/' . auth()->user()->avatar) }}">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    {{ auth()->user()->name }}
+                                </span>
+
+                                @if (auth()->user()->jenis_kelamin == 'Pria')
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ asset('admin/img/avatar/male.png') }}">
+                                @else
+                                    <img class="img-profile rounded-circle"
+                                        src="{{ asset('admin/img/avatar/female.png') }}">
+                                @endif
                             </a>
                         </li>
 
@@ -245,7 +260,7 @@
                                         Daftar Admin
                                     </div>
                                     <div class="card-body" style="overflow-y: scroll; height: 200px;">
-                                        <table class="table table-sm table-hover">
+                                        <table class="table  table-hover">
                                             <tr>
                                                 <th>
                                                     <p>No</p>
@@ -306,7 +321,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Penglipuran 2021</span>
                     </div>
                 </div>
             </footer>
