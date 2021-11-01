@@ -177,7 +177,108 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman Gallery</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Gallery</h1>
+
+                    {{-- Body --}}
+                    <div class="container-fluid">
+                        {{-- Alert --}}
+                        @if (session('status'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="row d-flex justify-content-between mb-5">
+                            {{-- Form input data admin --}}
+                            <div class="col-4">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Input Gambar
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="{{ url('tambah-gallery') }}" method="POST"
+                                            enctype="multipart/form-data">
+                                            @csrf
+
+                                            {{-- Input judul gambar --}}
+                                            <div class="form-group">
+                                                <label for="title">Judul Gambar :</label>
+                                                <input name="title" type="text" class="form-control" id="title"
+                                                    placeholder="Judul gambar" required>
+                                            </div>
+
+                                            {{-- Pilih gambar --}}
+                                            <div class="form-group">
+                                                <label for="">Pilih Gambar :</label>
+                                                <div class="custom-file">
+                                                    <input name="image" id="image" type="file" accept="image/*"
+                                                        class="custom-file-input" onchange="loadImage()">
+                                                    <label id="image-label" class="custom-file-label" for="image">Pilih
+                                                        gambar..</label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 mt-3">
+                                                        <img id="image-preview" src="" alt="" class="w-100 rounded">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Tombol submit --}}
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Table data admin --}}
+                            <div class="col-8">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        Daftar Gambar
+                                    </div>
+                                    <div class="card-body" style="overflow-y: scroll; height: 400px;">
+                                        <table class="table  table-hover">
+                                            <tr>
+                                                <th>
+                                                    <p>No</p>
+                                                </th>
+                                                <th>
+                                                    <p>Judul Gambar</p>
+                                                </th>
+                                                <th>
+                                                    <p>Dibuat Pada</p>
+                                                </th>
+                                                <th>
+                                                    <p>Aksi</p>
+                                                </th>
+                                            </tr>
+                                            @foreach ($galleries as $gallery)
+                                                <tr>
+                                                    <td>
+                                                        <p>{{ $loop->index + 1 }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $gallery->title }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $gallery->created_at }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/hapus-gallery/{{ $gallery->id }}"
+                                                            class="btn btn-sm btn-danger">
+                                                            <i class="far fa-trash-alt"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -235,6 +336,26 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
+
+    {{-- Fungsi Javascript --}}
+    <script>
+        function loadImage() {
+            let fReader = null;
+            let image = document.querySelector('#image');
+            let imageName = image.files[0].name;
+            let imageLabel = document.querySelector('#image-label');
+            let imagePreview = document.querySelector('#image-preview');
+
+            imageLabel.innerHTML = imageName;
+
+            fReader = new FileReader();
+            fReader.readAsDataURL(image.files[0]);
+
+            fReader.onload = function(e) {
+                imagePreview.src = e.target.result;
+            }
+        }
+    </script>
 
 </body>
 

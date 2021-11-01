@@ -205,7 +205,7 @@
                                         Input Admin
                                     </div>
                                     <div class="card-body">
-                                        <form action="{{ url('tambah-admin') }}" method="POST">
+                                        <form action="{{ url('admin-tambah') }}" method="POST">
                                             @csrf
 
                                             {{-- Input nama --}}

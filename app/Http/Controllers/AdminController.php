@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
@@ -21,16 +22,57 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    // Halaman Dashboard
+    // Halaman News
     public function news()
     {
         return view('admin.news');
     }
 
-    // Halaman Dashboard
+    // Halaman Gallery
     public function gallery()
     {
-        return view('admin.gallery');
+        // Ambil semua data gallery, untuk ditampilkan pada table
+        $data['galleries'] = DB::table('galleries')->orderBy('id', 'desc')->get();
+
+        return view('admin.gallery', $data);
+    }
+
+    // Fungsi Tambah Gallery
+    public function tambahGallery(Request $request)
+    {
+        // Ambil data dari form
+        $title = $request->title;
+        $image = $request->image;
+        $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+
+        // Proses upload gambar
+        $image->move(public_path('admin/img/gallery'), $imageName);
+
+        // Masukan data ke database Galleries
+        DB::table('galleries')->insert([
+            'title' => $title,
+            'image' => $imageName,
+            'created_at' => now()
+        ]);
+
+        // Redirect ke halaman Gallery
+        return redirect()->to('/kelola-gallery')->with('status', 'Berhasil menambah gambar baru');
+    }
+
+    // Fungsi Hapus Gallery
+    public function hapusGallery($id)
+    {
+        // Cari data yang ingin dihapus
+        $gallery = DB::table('galleries')->where('id', $id);
+
+        // Hapus gambar dari gallery
+        File::delete(public_path('admin\img\gallery\\') . $gallery->get()[0]->image);
+
+        // Hapus data gallery dari database Gallery
+        $gallery->delete();
+
+        // Redirect ke halaman Gallery
+        return redirect()->to('/kelola-gallery')->with('status', 'Berhasil menghapus gambar');
     }
 
     // Halaman Admin
@@ -42,7 +84,7 @@ class AdminController extends Controller
         return view('admin.admin', $data);
     }
 
-    // Tambah Admin
+    // Fungsi Tambah Admin
     public function tambahAdmin(Request $data)
     {
         // Ambil data dari form
