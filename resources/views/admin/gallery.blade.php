@@ -21,6 +21,14 @@
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
+
+    <style>
+        th,
+        td {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -188,7 +196,7 @@
                             </div>
                         @endif
 
-                        <div class="row d-flex justify-content-between mb-5">
+                        <div class="row d-flex justify-content-between mb-4">
                             {{-- Form input data admin --}}
                             <div class="col-4">
                                 <div class="card h-100">
@@ -238,7 +246,7 @@
                                     <div class="card-header">
                                         Daftar Gambar
                                     </div>
-                                    <div class="card-body" style="overflow-y: scroll; height: 400px;">
+                                    <div class="card-body" style="overflow-y: scroll; height: 420px;">
                                         <table class="table  table-hover">
                                             <tr>
                                                 <th>
@@ -248,24 +256,33 @@
                                                     <p>Judul Gambar</p>
                                                 </th>
                                                 <th>
+                                                    <p>Gambar</p>
+                                                </th>
+                                                <th>
                                                     <p>Dibuat Pada</p>
                                                 </th>
                                                 <th>
                                                     <p>Aksi</p>
                                                 </th>
                                             </tr>
+
+                                            {{-- Tampilkan semua data Gallery --}}
                                             @foreach ($galleries as $gallery)
                                                 <tr>
-                                                    <td>
+                                                    <td style="vertical-align: middle">
                                                         <p>{{ $loop->index + 1 }}</p>
                                                     </td>
-                                                    <td>
+                                                    <td style="vertical-align: middle">
                                                         <p>{{ $gallery->title }}</p>
                                                     </td>
-                                                    <td>
+                                                    <td style="vertical-align: middle">
+                                                        <img src="{{ asset('admin/img/gallery/1635773829 screenshot (506).png') }}"
+                                                            alt="" height="75px">
+                                                    </td>
+                                                    <td style="vertical-align: middle">
                                                         <p>{{ $gallery->created_at }}</p>
                                                     </td>
-                                                    <td>
+                                                    <td style="vertical-align: middle">
                                                         <a href="/hapus-gallery/{{ $gallery->id }}"
                                                             class="btn btn-sm btn-danger">
                                                             <i class="far fa-trash-alt"></i>

@@ -205,7 +205,7 @@
                                         Input Admin
                                     </div>
                                     <div class="card-body">
-                                        <form action="{{ url('admin-tambah') }}" method="POST">
+                                        <form action="{{ url('tambah-admin') }}" method="POST">
                                             @csrf
 
                                             {{-- Input nama --}}
@@ -278,6 +278,8 @@
                                                     <p>Aksi</p>
                                                 </th>
                                             </tr>
+
+                                            {{-- Tampilkan semua data Admin --}}
                                             @foreach ($admins as $i => $admin)
                                                 <tr>
                                                     <td>

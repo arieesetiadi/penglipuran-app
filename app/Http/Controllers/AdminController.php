@@ -25,14 +25,48 @@ class AdminController extends Controller
     // Halaman News
     public function news()
     {
-        return view('admin.news');
+        // Ambil semua data News, untuk ditampilkan pada table
+        $data['news'] = DB::table('news')
+            ->join('users', 'users.id', '=', 'news.user_id')
+            ->orderBy('id', 'desc')
+            ->select('news.*', 'users.name')
+            ->get();
+
+        return view('admin.news', $data);
+    }
+
+    // Fungsi tambah News
+    public function tambahNews(Request $request)
+    {
+        // Ambil data dari form
+        $title = $request->title;
+        $content = $request->content;
+        $image = $request->image;
+        $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+
+        // Proses upload gambar
+        $image->move(public_path('admin/img/news'), $imageName);
+
+        // Insert data ke database News
+        DB::table('news')->insert([
+            'user_id' => auth()->user()->id,
+            'title' => $title,
+            'image' => $imageName,
+            'content' => $content,
+            'created_at' => now()
+        ]);
+
+        // Redirect ke halaman News
+        return redirect()->to('/kelola-news')->with('status', 'Berhasil menambah news');
     }
 
     // Halaman Gallery
     public function gallery()
     {
         // Ambil semua data gallery, untuk ditampilkan pada table
-        $data['galleries'] = DB::table('galleries')->orderBy('id', 'desc')->get();
+        $data['galleries'] = DB::table('galleries')
+            ->orderBy('id', 'desc')
+            ->get();
 
         return view('admin.gallery', $data);
     }

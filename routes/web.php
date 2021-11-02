@@ -34,6 +34,7 @@ Route::get('/dashboard', [AdminController::class, 'dashboard']);
 
 // Halaman Post
 Route::get('/kelola-news', [AdminController::class, 'news']);
+Route::post('/tambah-news', [AdminController::class, 'tambahNews']);
 
 // Halaman Gallery
 Route::get('/kelola-gallery', [AdminController::class, 'gallery']);

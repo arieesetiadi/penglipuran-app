@@ -273,6 +273,8 @@
                                                     <p>Aksi</p>
                                                 </th>
                                             </tr>
+
+                                            {{-- Tampilkan semua data Admin --}}
                                             @foreach ($admins as $i => $admin)
                                                 <tr>
                                                     <td>

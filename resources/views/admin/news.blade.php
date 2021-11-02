@@ -21,6 +21,14 @@
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
+
+    <style>
+        th,
+        td {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -179,6 +187,120 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Halaman News</h1>
 
+                    <div class="container-fluid">
+                        {{-- Alert --}}
+                        @if (session('status'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="card h-100 mb-5">
+                            <div class="card-header">
+                                Input Berita
+                            </div>
+                            <div class="card-body">
+                                <form action="{{ url('tambah-news') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-4">
+                                            {{-- Input nama --}}
+                                            <div class="form-group">
+                                                <label for="title">Judul :</label>
+                                                <input name="title" type="text" class="form-control" id="title"
+                                                    placeholder="Judul" required>
+                                            </div>
+                                            {{-- Pilih gambar --}}
+                                            <div class="form-group">
+                                                <label for="">Pilih Gambar :</label>
+                                                <div class="custom-file">
+                                                    <input name="image" id="image" type="file" accept="image/*"
+                                                        class="custom-file-input" onchange="loadImage()">
+                                                    <label id="image-label" class="custom-file-label" for="image">Pilih
+                                                        gambar..</label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 mt-3">
+                                                        <center>
+                                                            <img id="image-preview"
+                                                                style="max-height: 210px; max-width: 100%" src="" alt=""
+                                                                class="rounded">
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="form-group">
+                                                <label for="content">Isi Berita :</label>
+                                                <textarea name="content" style="height: 350px" class="form-control"
+                                                    id="content" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- Tombol submit --}}
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card h-100 mb-5">
+                            <div class="card-header">
+                                Daftar Berita
+                            </div>
+                            <div class="card-body" style="overflow-y: scroll; height: 400px;">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>
+                                            <p>No</p>
+                                        </th>
+                                        <th>
+                                            <p>Judul Berita</p>
+                                        </th>
+                                        <th>
+                                            <p>Dibuat oleh</p>
+                                        </th>
+                                        <th>
+                                            <p>Dibuat pada</p>
+                                        </th>
+                                        <th>
+                                            <p>Aksi</p>
+                                        </th>
+                                    </tr>
+
+                                    {{-- Tampilkan semua data News --}}
+                                    @foreach ($news as $news)
+                                        <tr>
+                                            <td>
+                                                <p>{{ $loop->index + 1 }}</p>
+                                            </td>
+                                            <td>
+                                                <p>{{ $news->title }}</p>
+                                            </td>
+                                            <td>
+                                                <p>{{ $news->name }}</p>
+                                            </td>
+                                            <td>
+                                                <p>{{ $news->created_at }}</p>
+                                            </td>
+                                            <td>
+                                                <a href="/halaman-ubah-news/{{ $news->id }}"
+                                                    class="btn btn-sm btn-white">
+                                                    <i class="fas fa-pen"></i>
+                                                </a>
+                                                <a href="/hapus-news/{{ $news->id }}"
+                                                    class="btn btn-sm btn-danger">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -235,6 +357,26 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
+
+    {{-- Fungsi Javascript --}}
+    <script>
+        function loadImage() {
+            let fReader = null;
+            let image = document.querySelector('#image');
+            let imageName = image.files[0].name;
+            let imageLabel = document.querySelector('#image-label');
+            let imagePreview = document.querySelector('#image-preview');
+
+            imageLabel.innerHTML = imageName;
+
+            fReader = new FileReader();
+            fReader.readAsDataURL(image.files[0]);
+
+            fReader.onload = function(e) {
+                imagePreview.src = e.target.result;
+            }
+        }
+    </script>
 
 </body>
 
