@@ -35,10 +35,16 @@ Route::get('/dashboard', [AdminController::class, 'dashboard']);
 // Halaman Post
 Route::get('/kelola-news', [AdminController::class, 'news']);
 Route::post('/tambah-news', [AdminController::class, 'tambahNews']);
+Route::get('/halaman-tambah-news', [AdminController::class, 'halamanTambahNews']);
+Route::post('/ubah-news', [AdminController::class, 'ubahNews']);
+Route::get('/halaman-ubah-news/{id}', [AdminController::class, 'halamanUbahNews']);
+Route::get('/hapus-news/{id}', [AdminController::class, 'hapusNews']);
 
 // Halaman Gallery
 Route::get('/kelola-gallery', [AdminController::class, 'gallery']);
 Route::post('/tambah-gallery', [AdminController::class, 'tambahGallery']);
+Route::post('/ubah-gallery', [AdminController::class, 'ubahGallery']);
+Route::get('/halaman-ubah-gallery/{id}', [AdminController::class, 'halamanUbahGallery']);
 Route::get('/hapus-gallery/{id}', [AdminController::class, 'hapusGallery']);
 
 // Halaman admin

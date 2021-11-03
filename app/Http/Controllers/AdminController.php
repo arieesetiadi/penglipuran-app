@@ -35,17 +35,26 @@ class AdminController extends Controller
         return view('admin.news', $data);
     }
 
+    public function halamanTambahNews()
+    {
+        return view('admin.tambah-news');
+    }
+
     // Fungsi tambah News
-    public function tambahNews(Request $request)
+    public function tambahNews(Request $data)
     {
         // Ambil data dari form
-        $title = $request->title;
-        $content = $request->content;
-        $image = $request->image;
-        $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+        $imageName = null;
+        $title = $data->title;
+        $content = $data->content;
+        $image = $data->image;
 
-        // Proses upload gambar
-        $image->move(public_path('admin/img/news'), $imageName);
+        // Jika ada gambar yang diupload, maka upload gambar tersebut
+        if ($image != null) {
+            $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+            // Proses upload gambar
+            $image->move(public_path('admin/img/news'), $imageName);
+        }
 
         // Insert data ke database News
         DB::table('news')->insert([
@@ -60,6 +69,76 @@ class AdminController extends Controller
         return redirect()->to('/kelola-news')->with('status', 'Berhasil menambah news');
     }
 
+    // Halaman Ubah News
+    public function halamanUbahNews($id)
+    {
+        // Ambil data News yang dipilih
+        $data['news'] = DB::table('news')
+            ->join('users', 'users.id', '=', 'news.user_id')
+            ->where('news.id', $id)
+            ->orderBy('id', 'desc')
+            ->select('news.*', 'users.name')
+            ->get()[0];
+
+        return view('admin.ubah-news', $data);
+    }
+
+    public function ubahNews(Request $data)
+    {
+        // Ambil data dari form
+        $id = $data->id;
+        $title = $data->title;
+        $content = $data->content;
+        $image = $data->image;
+
+        // Jika ada gambar yang diupload, maka upload gambar tersebut
+        if ($image != null) {
+            // Proses upload gambar
+            $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+            $image->move(public_path('admin/img/news'), $imageName);
+
+            // Insert data ke database News
+            DB::table('news')
+                ->where('id', $id)
+                ->update([
+                    'user_id' => auth()->user()->id,
+                    'title' => $title,
+                    'image' => $imageName,
+                    'content' => $content,
+                    'updated_at' => now()
+                ]);
+        } else {
+            // Insert data ke database News
+            DB::table('news')
+                ->where('id', $id)
+                ->update([
+                    'user_id' => auth()->user()->id,
+                    'title' => $title,
+                    'content' => $content,
+                    'updated_at' => now()
+                ]);
+        }
+
+        // Redirect ke halaman News
+        return redirect()->to('/kelola-news')->with('status', 'Berhasil mengubah news');
+    }
+
+    // Fungsi Hapus News
+    public function hapusNews($id)
+    {
+        // Cari data yang ingin dihapus
+        $news = DB::table('news')->where('id', $id);
+
+        // Hapus gambar dari news
+        File::delete(public_path('admin\img\news\\') . $news->get()[0]->image);
+
+        // Hapus data dari database news
+        $news->delete();
+
+        // Redirect ke halaman news
+        return redirect()->to('/kelola-news')->with('status', 'Berhasil menghapus news');
+    }
+
     // Halaman Gallery
     public function gallery()
     {
@@ -72,11 +151,11 @@ class AdminController extends Controller
     }
 
     // Fungsi Tambah Gallery
-    public function tambahGallery(Request $request)
+    public function tambahGallery(Request $data)
     {
         // Ambil data dari form
-        $title = $request->title;
-        $image = $request->image;
+        $title = $data->title;
+        $image = $data->image;
         $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
 
         // Proses upload gambar
@@ -91,6 +170,58 @@ class AdminController extends Controller
 
         // Redirect ke halaman Gallery
         return redirect()->to('/kelola-gallery')->with('status', 'Berhasil menambah gambar baru');
+    }
+
+    // Halaman Ubah Admin
+    public function halamanUbahGallery($id)
+    {
+        // Ambil data gallery yang dipilih
+        $data['gallery'] = DB::table('galleries')
+            ->where('id', $id)
+            ->get()[0];
+
+        // Ambil semua data admin, untuk ditampilkan pada table
+        $data['galleries'] = DB::table('galleries')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('admin.ubah-gallery', $data);
+    }
+
+    // Ubah Admin
+    public function ubahGallery(Request $data)
+    {
+        // Ambil data dari form
+        $id = $data->id;
+        $title = $data->title;
+        $image = $data->image;
+
+        // Jika ada perubahan gambar, maka lakukan proses upload gambar
+        if ($image != null) {
+            // Proses upload gambar
+            $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
+            $image->move(public_path('admin/img/gallery'), $imageName);
+
+            // Insert data ke database galleries
+            DB::table('galleries')
+                ->where('id', $id)
+                ->update([
+                    'title' => $title,
+                    'image' => $imageName,
+                    'updated_at' => now()
+                ]);
+        } else {
+            // Insert data ke database galleries
+            DB::table('galleries')
+                ->where('id', $id)
+                ->update([
+                    'title' => $title,
+                    'updated_at' => now()
+                ]);
+        }
+
+        // Redirect ke halaman gallery
+        return redirect()->to('/kelola-gallery')->with('status', 'Berhasil mengubah data gallery');
     }
 
     // Fungsi Hapus Gallery

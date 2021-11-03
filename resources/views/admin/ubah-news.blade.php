@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gallery - Desa Penglipuran</title>
+    <title>News - Desa Penglipuran</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -67,7 +68,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="{{ url('kelola-news') }}">
                     <i class="far fa-newspaper"></i>
                     <span>News</span>
@@ -75,7 +76,7 @@
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('kelola-gallery') }}">
                     <i class="far fa-images"></i>
                     <span>Gallery</span>
@@ -185,9 +186,8 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Gallery</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Ubah News</h1>
 
-                    {{-- Body --}}
                     <div class="container-fluid">
                         {{-- Alert --}}
                         @if (session('status'))
@@ -196,111 +196,69 @@
                             </div>
                         @endif
 
-                        <div class="row d-flex justify-content-between mb-4">
-                            {{-- Form input data admin --}}
-                            <div class="col-4">
-                                <div class="card h-100">
-                                    <div class="card-header">
-                                        Input Gambar
-                                    </div>
-                                    <div class="card-body">
-                                        <form action="{{ url('tambah-gallery') }}" method="POST"
-                                            enctype="multipart/form-data">
-                                            @csrf
+                        <div class="card h-100 mb-5">
+                            <div class="card-header">
+                                Ubah Berita
+                            </div>
+                            <div class="card-body">
+                                <form action="{{ url('ubah-news') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    {{-- Hidden ID --}}
+                                    <input type="hidden" name="id" value="{{ $news->id }}">
 
-                                            {{-- Input judul gambar --}}
+                                    <div class="row">
+                                        <div class="col-4">
+                                            {{-- Input nama --}}
                                             <div class="form-group">
-                                                <label for="title">Judul Gambar :</label>
+                                                <label for="title">Judul :</label>
                                                 <input name="title" type="text" class="form-control" id="title"
-                                                    placeholder="Judul gambar" required>
+                                                    placeholder="Judul" value="{{ $news->title }}" required>
                                             </div>
-
                                             {{-- Pilih gambar --}}
                                             <div class="form-group">
                                                 <label for="">Pilih Gambar :</label>
                                                 <div class="custom-file">
                                                     <input name="image" id="image" type="file" accept="image/*"
                                                         class="custom-file-input" onchange="loadImage()">
-                                                    <label id="image-label" class="custom-file-label" for="image">Pilih
-                                                        gambar..</label>
+                                                    <label id="image-label" class="custom-file-label" for="image">
+                                                        {{ $news->image == null ? 'Pilih gambar..' : $news->image }}
+                                                    </label>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12 mt-3">
-                                                        <img id="image-preview" src="" alt="" class="w-100 rounded">
+                                                        <center>
+                                                            @if ($news->image == null)
+                                                                <img id="image-preview"
+                                                                    style="max-height: 210px; max-width: 100%" src=""
+                                                                    alt="" class="rounded">
+                                                            @else
+                                                                <img id="image-preview"
+                                                                    style="max-height: 210px; max-width: 100%"
+                                                                    src="{{ asset('admin/img/news/' . $news->image) }}"
+                                                                    alt="" class="rounded">
+                                                            @endif
+                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            {{-- Tombol submit --}}
+                                        </div>
+                                        <div class="col-8">
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                                <label for="content">Isi Berita :</label>
+                                                <textarea name="content" style="height: 350px" class="form-control"
+                                                    id="content" rows="4" required>{{ $news->content }}</textarea>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            {{-- Table data admin --}}
-                            <div class="col-8">
-                                <div class="card h-100">
-                                    <div class="card-header">
-                                        Daftar Gambar
+                                    <hr>
+                                    {{-- Tombol submit --}}
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
-                                    <div class="card-body" style="overflow-y: scroll; height: 420px;">
-                                        <table class="table  table-hover">
-                                            <tr>
-                                                <th>
-                                                    <p>No</p>
-                                                </th>
-                                                <th>
-                                                    <p>Judul Gambar</p>
-                                                </th>
-                                                <th>
-                                                    <p>Gambar</p>
-                                                </th>
-                                                <th>
-                                                    <p>Dibuat Pada</p>
-                                                </th>
-                                                <th>
-                                                    <p>Aksi</p>
-                                                </th>
-                                            </tr>
-
-                                            {{-- Tampilkan semua data Gallery --}}
-                                            @foreach ($galleries as $gallery)
-                                                <tr>
-                                                    <td style="vertical-align: middle">
-                                                        <p>{{ $loop->index + 1 }}</p>
-                                                    </td>
-                                                    <td style="vertical-align: middle">
-                                                        <p>{{ $gallery->title }}</p>
-                                                    </td>
-                                                    <td style="vertical-align: middle">
-                                                        <img src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
-                                                            alt="" height="75px">
-                                                    </td>
-                                                    <td style="vertical-align: middle">
-                                                        <p>{{ $gallery->created_at }}</p>
-                                                    </td>
-                                                    <td style="vertical-align: middle">
-                                                        <a href="/halaman-ubah-gallery/{{ $gallery->id }}"
-                                                            class="btn btn-sm btn-white">
-                                                            <i class="fas fa-pen"></i>
-                                                        </a>
-                                                        <a href="/hapus-gallery/{{ $gallery->id }}"
-                                                            class="btn btn-sm btn-danger">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        </table>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 

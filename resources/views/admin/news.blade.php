@@ -13,6 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -185,7 +186,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman News</h1>
+                    <h1 class="h3 mb-4 text-gray-800">News</h1>
 
                     <div class="container-fluid">
                         {{-- Alert --}}
@@ -197,60 +198,19 @@
 
                         <div class="card h-100 mb-5">
                             <div class="card-header">
-                                Input Berita
-                            </div>
-                            <div class="card-body">
-                                <form action="{{ url('tambah-news') }}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="row">
-                                        <div class="col-4">
-                                            {{-- Input nama --}}
-                                            <div class="form-group">
-                                                <label for="title">Judul :</label>
-                                                <input name="title" type="text" class="form-control" id="title"
-                                                    placeholder="Judul" required>
-                                            </div>
-                                            {{-- Pilih gambar --}}
-                                            <div class="form-group">
-                                                <label for="">Pilih Gambar :</label>
-                                                <div class="custom-file">
-                                                    <input name="image" id="image" type="file" accept="image/*"
-                                                        class="custom-file-input" onchange="loadImage()">
-                                                    <label id="image-label" class="custom-file-label" for="image">Pilih
-                                                        gambar..</label>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 mt-3">
-                                                        <center>
-                                                            <img id="image-preview"
-                                                                style="max-height: 210px; max-width: 100%" src="" alt=""
-                                                                class="rounded">
-                                                        </center>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="form-group">
-                                                <label for="content">Isi Berita :</label>
-                                                <textarea name="content" style="height: 350px" class="form-control"
-                                                    id="content" rows="4"></textarea>
-                                            </div>
-                                        </div>
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-6">
+                                        Daftar Berita
                                     </div>
-                                    {{-- Tombol submit --}}
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    <div class="col-2 d-flex justify-content-end">
+                                        <a href="/halaman-tambah-news" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-plus"></i>
+                                            Tambah News
+                                        </a>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="card h-100 mb-5">
-                            <div class="card-header">
-                                Daftar Berita
-                            </div>
-                            <div class="card-body" style="overflow-y: scroll; height: 400px;">
+                            <div class="card-body" style="overflow-y: scroll; height: 420px;">
                                 <table class="table table-hover">
                                     <tr>
                                         <th>

@@ -185,7 +185,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Gallery</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Ubah Gallery</h1>
 
                     {{-- Body --}}
                     <div class="container-fluid">
@@ -201,18 +201,21 @@
                             <div class="col-4">
                                 <div class="card h-100">
                                     <div class="card-header">
-                                        Input Gambar
+                                        Ubah Gambar
                                     </div>
                                     <div class="card-body">
-                                        <form action="{{ url('tambah-gallery') }}" method="POST"
+                                        <form action="{{ url('ubah-gallery') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
+                                            {{-- Hidden ID --}}
+                                            <input name="id" type="hidden" value="{{ $gallery->id }}">
 
                                             {{-- Input judul gambar --}}
                                             <div class="form-group">
                                                 <label for="title">Judul Gambar :</label>
                                                 <input name="title" type="text" class="form-control" id="title"
-                                                    placeholder="Judul gambar" required>
+                                                    placeholder="Judul gambar" value="{{ $gallery->title }}"
+                                                    required>
                                             </div>
 
                                             {{-- Pilih gambar --}}
@@ -221,12 +224,23 @@
                                                 <div class="custom-file">
                                                     <input name="image" id="image" type="file" accept="image/*"
                                                         class="custom-file-input" onchange="loadImage()">
-                                                    <label id="image-label" class="custom-file-label" for="image">Pilih
-                                                        gambar..</label>
+                                                    <label id="image-label" class="custom-file-label"
+                                                        for="image">{{ $gallery->image }}</label>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-12 mt-3">
-                                                        <img id="image-preview" src="" alt="" class="w-100 rounded">
+                                                        <center>
+                                                            @if ($gallery->image == null)
+                                                                <img id="image-preview"
+                                                                    style="max-height: 210px; max-width: 100%" src=""
+                                                                    alt="" class="rounded">
+                                                            @else
+                                                                <img id="image-preview"
+                                                                    style="max-height: 210px; max-width: 100%"
+                                                                    src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
+                                                                    alt="" class="rounded">
+                                                            @endif
+                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
@@ -277,7 +291,7 @@
                                                     </td>
                                                     <td style="vertical-align: middle">
                                                         <img src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
-                                                            alt="" height="75px">
+                                                            alt="" height="75px" class="rounded">
                                                     </td>
                                                     <td style="vertical-align: middle">
                                                         <p>{{ $gallery->created_at }}</p>
