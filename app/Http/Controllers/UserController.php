@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -12,16 +13,27 @@ class UserController extends Controller
         return view('user.home');
     }
 
-    // Halaman Virtual Tour
-    public function virtualTour()
+    // Halaman News
+    public function news()
     {
-        return view('user.virtual-tour');
+        // Ambil semua data News
+        $data['news'] = DB::table('news')
+            ->orderBy('id', 'desc')
+            ->get();
+
+        return view('user.news', $data);
     }
 
-    // Halaman Tentang Kami
-    public function tentangKami()
+    // Halaman News
+    public function product()
     {
-        return view('user.tentang-kami');
+        return view('user.product');
+    }
+
+    // Halaman About
+    public function about()
+    {
+        return view('user.about');
     }
 
     // Halaman Gallery
@@ -30,15 +42,22 @@ class UserController extends Controller
         return view('user.gallery');
     }
 
-    // Halaman Blog
-    public function blog()
+    // Halaman Company Profile
+    public function companyProfile()
     {
-        return view('user.blog');
+        return view('user.company-profile');
     }
 
-    // Halaman Kontak
-    public function kontak()
+    // Halaman Virtual Tour
+    public function virtualTour()
     {
-        return view('user.kontak');
+        return view('user.virtual-tour');
+    }
+
+
+    // Halaman Contact
+    public function contact()
+    {
+        return view('user.contact');
     }
 }

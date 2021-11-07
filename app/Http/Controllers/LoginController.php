@@ -20,14 +20,14 @@ class LoginController extends Controller
     public function prosesLogin(Request $data)
     {
         // Ambil data Username dari form login
-        $email = $data->email;
+        $username = $data->username;
 
         // Ambil data Password dari form login
         $password = $data->password;
 
         // Lakukan proses login
         $login = Auth::attempt([
-            'email' => $email,
+            'username' => $username,
             'password' => $password
         ]);
 
@@ -35,7 +35,7 @@ class LoginController extends Controller
         if ($login == true) {
             return redirect()->to('dashboard');
         } else {
-            return redirect()->back()->with('gagal', 'Email atau Password Salah');
+            return redirect()->back()->with('status', 'Username atau Password Salah');
         }
     }
 }

@@ -66,27 +66,44 @@
 
                             <nav id="main-nav" class="main-nav">
                                 <ul id="menu-primary-menu" class="menu">
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="/">HOME</a>
-                                        {{-- <ul class="sub-menu">
-                                            <li class="menu-item current-item"><a href="home.html">HOME 1</a></li>
-                                            <li class="menu-item"><a href="home-2.html">HOME 2</a></li>
-                                        </ul> --}}
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="{{ url('/') }}">HOME</a>
                                     </li>
+
                                     <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('tampil-virtual-tour') }}">VIRTUAL TOUR</a>
+                                        <a href="{{ url('news') }}">NEWS</a>
                                     </li>
+
                                     <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('tampil-tentang-kami') }}">TENTANG KAMI</a>
+                                        <a href="{{ url('product') }}">PRODUCT</a>
                                     </li>
+
+                                    <li class="menu-item menu-item-has-children ">
+                                        <a href="{{ url('about') }}">ABOUT</a>
+                                    </li>
+
                                     <li class="menu-item menu-item-has-children current-menu-item">
-                                        <a href="{{ url('tampil-gallery') }}">GALLERY</a>
+                                        <a href="#">GALLERY</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item current-item">
+                                                <a href="{{ url('gallery') }}">GALLERY</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('company-profile') }}">COMPANY PROFILE</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('tampil-blog') }}">BLOG</a>
+
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="{{ url('virtual-tour') }}">VIRTUAL TOUR 360<sup>o</sup></a>
                                     </li>
+
                                     <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('tampil-kontak') }}">KONTAK</a>
+                                        <a href="{{ url('contact') }}">CONTACT</a>
+                                    </li>
+
+                                    <li class="menu-item menu-item-has-children ">
+                                        <a href="{{ url('login') }}">LOGIN</a>
                                     </li>
                                 </ul>
                             </nav><!-- /#main-nav -->
@@ -112,7 +129,7 @@
                                                 <div class="themesflat-spacer clearfix" data-desktop="60"
                                                     data-mobile="60" data-smobile="60"></div>
                                                 <div class="themesflat-headings style-1 text-center clearfix">
-                                                    <h2 class="heading">HALAMAN GALLERY</h2>
+                                                    <h2 class="heading">GALLERY</h2>
                                                     <div class="sep has-icon width-125 clearfix">
                                                         <div class="sep-icon">
                                                             <span class="sep-icon-before sep-center sep-solid"></span>

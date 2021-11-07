@@ -220,6 +220,9 @@
                                             <p>Judul Berita</p>
                                         </th>
                                         <th>
+                                            <p>Gambar Berita</p>
+                                        </th>
+                                        <th>
                                             <p>Dibuat oleh</p>
                                         </th>
                                         <th>
@@ -233,19 +236,28 @@
                                     {{-- Tampilkan semua data News --}}
                                     @foreach ($news as $news)
                                         <tr>
-                                            <td>
+                                            <td style="vertical-align: middle">
                                                 <p>{{ $loop->index + 1 }}</p>
                                             </td>
-                                            <td>
+
+                                            <td style="vertical-align: middle">
                                                 <p>{{ $news->title }}</p>
                                             </td>
-                                            <td>
+
+                                            <td style="vertical-align: middle">
+                                                <img src="{{ asset('admin/img/news/' . $news->image) }}" alt=""
+                                                    height="75px" class="rounded-sm">
+                                            </td>
+
+                                            <td style="vertical-align: middle">
                                                 <p>{{ $news->name }}</p>
                                             </td>
-                                            <td>
+
+                                            <td style="vertical-align: middle">
                                                 <p>{{ $news->created_at }}</p>
                                             </td>
-                                            <td>
+
+                                            <td style="vertical-align: middle">
                                                 <a href="/halaman-ubah-news/{{ $news->id }}"
                                                     class="btn btn-sm btn-white">
                                                     <i class="fas fa-pen"></i>

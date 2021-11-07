@@ -143,7 +143,7 @@
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
+                                        <input type="text" class="form-control  bg-light border-0 small"
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -211,7 +211,7 @@
                                             {{-- Input judul gambar --}}
                                             <div class="form-group">
                                                 <label for="title">Judul Gambar :</label>
-                                                <input name="title" type="text" class="form-control" id="title"
+                                                <input name="title" type="text" class="form-control " id="title"
                                                     placeholder="Judul gambar" required>
                                             </div>
 
@@ -247,7 +247,7 @@
                                         Daftar Gambar
                                     </div>
                                     <div class="card-body" style="overflow-y: scroll; height: 420px;">
-                                        <table class="table  table-hover">
+                                        <table class="table table-sm table-hover">
                                             <tr>
                                                 <th>
                                                     <p>No</p>
@@ -272,16 +272,20 @@
                                                     <td style="vertical-align: middle">
                                                         <p>{{ $loop->index + 1 }}</p>
                                                     </td>
+
                                                     <td style="vertical-align: middle">
                                                         <p>{{ $gallery->title }}</p>
                                                     </td>
+
                                                     <td style="vertical-align: middle">
                                                         <img src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
                                                             alt="" height="75px">
                                                     </td>
+
                                                     <td style="vertical-align: middle">
                                                         <p>{{ $gallery->created_at }}</p>
                                                     </td>
+
                                                     <td style="vertical-align: middle">
                                                         <a href="/halaman-ubah-gallery/{{ $gallery->id }}"
                                                             class="btn btn-sm btn-white">

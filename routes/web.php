@@ -66,17 +66,23 @@ Route::get('/hapus-admin/{id}', [AdminController::class, 'hapusAdmin']);
 // Halaman Home
 Route::get('/', [UserController::class, 'home']);
 
-// Halaman Virtual Tour
-Route::get('/tampil-virtual-tour', [UserController::class, 'virtualTour']);
+// Halaman News
+Route::get('/news', [UserController::class, 'news']);
 
-// Halaman Tentang Kami
-Route::get('/tampil-tentang-kami', [UserController::class, 'tentangKami']);
+// Halaman Product
+Route::get('/product', [UserController::class, 'product']);
+
+// Halaman About
+Route::get('/about', [UserController::class, 'about']);
 
 // Halaman Gallery
-Route::get('/tampil-gallery', [UserController::class, 'gallery']);
+Route::get('/gallery', [UserController::class, 'gallery']);
 
-// Halaman Blog
-Route::get('/tampil-blog', [UserController::class, 'blog']);
+// Halaman Company Profile
+Route::get('/company-profile', [UserController::class, 'companyProfile']);
+
+// Halaman Virtual Tour
+Route::get('/virtual-tour', [UserController::class, 'virtualTour']);
 
 // Halaman Kontak
-Route::get('/tampil-kontak', [UserController::class, 'kontak']);
+Route::get('/contact', [UserController::class, 'contact']);

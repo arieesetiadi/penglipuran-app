@@ -29,12 +29,12 @@
                     <form action="{{ url('login') }}" method="POST">
                         @csrf
                         <div class="form-group mt-4">
-                            @if (session('gagal'))
-                                <small class="text-danger text-center d-block">{{ session('gagal') }}</small>
+                            @if (session('status'))
+                                <small class="text-danger text-center d-block">{{ session('status') }}</small>
                             @endif
-                            <label for="email">Email :</label>
-                            <input name="email" type="email" class="form-control form-control-sm" id="email"
-                                placeholder="Email" autofocus required>
+                            <label for="username">Username :</label>
+                            <input name="username" type="text" class="form-control form-control-sm" id="username"
+                                placeholder="Username" autofocus required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password :</label>

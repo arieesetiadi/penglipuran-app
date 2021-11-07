@@ -21,6 +21,14 @@
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
+
+    <style>
+        th p,
+        td p {
+            text-align: center;
+        }
+
+    </style>
 </head>
 
 <body id="page-top">
@@ -135,7 +143,7 @@
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
+                                        <input type="text" class="form-control form-control-sm bg-light border-0 small"
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -188,7 +196,7 @@
                             </div>
                         @endif
 
-                        <div class="row d-flex justify-content-between">
+                        <div class="row d-flex justify-content-between mb-5">
                             {{-- Form input data admin --}}
                             <div class="col-4">
                                 <div class="card h-100">
@@ -204,22 +212,32 @@
                                             {{-- Input nama --}}
                                             <div class="form-group">
                                                 <label for="nama">Nama :</label>
-                                                <input name="nama" type="text" class="form-control" id="nama"
-                                                    placeholder="Nama" value="{{ $admin->name }}" required>
+                                                <input name="nama" type="text" class="form-control form-control-sm"
+                                                    id="nama" placeholder="Nama" value="{{ $admin->name }}" required>
+                                            </div>
+
+                                            {{-- Input username --}}
+                                            <div class="form-group">
+                                                <label for="username">Username :</label>
+                                                <input name="username" type="text" class="form-control form-control-sm"
+                                                    id="username" placeholder="Username"
+                                                    value="{{ $admin->username }}" required>
                                             </div>
 
                                             {{-- Input email --}}
                                             <div class="form-group">
                                                 <label for="email">Email :</label>
-                                                <input name="email" type="email" class="form-control" id="email"
-                                                    placeholder="Email" value="{{ $admin->email }}" required>
+                                                <input name="email" type="email" class="form-control form-control-sm"
+                                                    id="email" placeholder="Email" value="{{ $admin->email }}"
+                                                    required>
                                             </div>
 
                                             {{-- Input password --}}
                                             <div class="form-group">
                                                 <label for="password">Password (Optional) :</label>
-                                                <input name="password" type="password" class="form-control"
-                                                    id="password" placeholder="Password">
+                                                <input name="password" type="password"
+                                                    class="form-control form-control-sm" id="password"
+                                                    placeholder="Password">
                                             </div>
 
                                             {{-- Input jenis kelamin --}}
@@ -264,6 +282,9 @@
                                                     <p>Nama</p>
                                                 </th>
                                                 <th>
+                                                    <p>Username</p>
+                                                </th>
+                                                <th>
                                                     <p>Email</p>
                                                 </th>
                                                 <th>
@@ -282,6 +303,9 @@
                                                     </td>
                                                     <td>
                                                         <p>{{ $admin->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->username }}</p>
                                                     </td>
                                                     <td>
                                                         <p>{{ $admin->email }}</p>

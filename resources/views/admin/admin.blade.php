@@ -143,7 +143,7 @@
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
+                                        <input type="text" class="form-control form-control-sm bg-light border-0 small"
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -197,7 +197,7 @@
                             </div>
                         @endif
 
-                        <div class="row d-flex justify-content-between">
+                        <div class="row d-flex justify-content-between mb-5">
                             {{-- Form input data admin --}}
                             <div class="col-4">
                                 <div class="card h-100">
@@ -211,22 +211,30 @@
                                             {{-- Input nama --}}
                                             <div class="form-group">
                                                 <label for="nama">Nama :</label>
-                                                <input name="nama" type="text" class="form-control" id="nama"
-                                                    placeholder="Nama" required>
+                                                <input name="nama" type="text" class="form-control form-control-sm"
+                                                    id="nama" placeholder="Nama" required>
+                                            </div>
+
+                                            {{-- Input usernama --}}
+                                            <div class="form-group">
+                                                <label for="username">Username :</label>
+                                                <input name="username" type="text" class="form-control form-control-sm"
+                                                    id="username" placeholder="Username" required>
                                             </div>
 
                                             {{-- Input email --}}
                                             <div class="form-group">
                                                 <label for="email">Email :</label>
-                                                <input name="email" type="email" class="form-control" id="email"
-                                                    placeholder="Email" required>
+                                                <input name="email" type="email" class="form-control form-control-sm"
+                                                    id="email" placeholder="Email" required>
                                             </div>
 
                                             {{-- Input password --}}
                                             <div class="form-group">
                                                 <label for="password">Password :</label>
-                                                <input name="password" type="password" class="form-control"
-                                                    id="password" placeholder="Password" required>
+                                                <input name="password" type="password"
+                                                    class="form-control form-control-sm" id="password"
+                                                    placeholder="Password" required>
                                             </div>
 
                                             {{-- Input jenis kelamin --}}
@@ -260,13 +268,16 @@
                                         Daftar Admin
                                     </div>
                                     <div class="card-body" style="overflow-y: scroll; height: 200px;">
-                                        <table class="table  table-hover">
+                                        <table class="table table-sm table-hover">
                                             <tr>
                                                 <th>
                                                     <p>No</p>
                                                 </th>
                                                 <th>
                                                     <p>Nama</p>
+                                                </th>
+                                                <th>
+                                                    <p>Username</p>
                                                 </th>
                                                 <th>
                                                     <p>Email</p>
@@ -287,6 +298,9 @@
                                                     </td>
                                                     <td>
                                                         <p>{{ $admin->name }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{{ $admin->username }}</p>
                                                     </td>
                                                     <td>
                                                         <p>{{ $admin->email }}</p>

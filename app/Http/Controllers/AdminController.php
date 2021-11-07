@@ -254,6 +254,7 @@ class AdminController extends Controller
     {
         // Ambil data dari form
         $nama = $data->nama;
+        $username = $data->username;
         $email = $data->email;
         $password = $data->password;
         $jenisKelamin = $data->jenisKelamin;
@@ -261,6 +262,7 @@ class AdminController extends Controller
         // Masukan ke database Users
         DB::table('users')->insert([
             'name' => $nama,
+            'username' => $username,
             'email' => $email,
             'password' => Hash::make($password),
             'jenis_kelamin' => $jenisKelamin,
@@ -289,6 +291,7 @@ class AdminController extends Controller
         // Ambil data dari form
         $id = $data->id;
         $nama = $data->nama;
+        $username = $data->username;
         $email = $data->email;
         $password = $data->password;
         $jenisKelamin = $data->jenisKelamin;
@@ -299,6 +302,7 @@ class AdminController extends Controller
                 ->where('id', $id)
                 ->update([
                     'name' => $nama,
+                    'username' => $username,
                     'email' => $email,
                     'jenis_kelamin' => $jenisKelamin
                 ]);
@@ -310,6 +314,7 @@ class AdminController extends Controller
                 ->where('id', $id)
                 ->update([
                     'name' => $nama,
+                    'username' => $username,
                     'email' => $email,
                     'password' => Hash::make($password),
                     'jenis_kelamin' => $jenisKelamin
