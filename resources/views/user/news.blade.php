@@ -120,12 +120,12 @@
                     <div id="site-content" class="site-content clearfix">
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
-
                                 <!-- ICONBOX -->
                                 <div class="row-iconbox">
-                                    <div class="container py-5">
+                                    <div class="container w-75 py-5">
                                         @foreach ($news as $news)
-                                            <div>
+                                            <center>
+                                                <div>
                                                 <h2>{{ $news->title }}</h2>
                                                 <img src="{{ asset('admin/img/news/' . $news->image) }}"
                                                     alt="Gambar Berita" class="my-2">
@@ -134,6 +134,7 @@
                                                     <hr>
                                                 </div>
                                             </div>
+                                            </center>
                                         @endforeach
                                     </div><!-- /.container -->
                                 </div>

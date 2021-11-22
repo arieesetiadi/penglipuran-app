@@ -279,7 +279,7 @@
 
                                                     <td style="vertical-align: middle">
                                                         <img src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
-                                                            alt="" height="75px">
+                                                            alt="" height="75px" class="rounded">
                                                     </td>
 
                                                     <td style="vertical-align: middle">

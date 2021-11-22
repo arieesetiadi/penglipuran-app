@@ -39,7 +39,10 @@ class UserController extends Controller
     // Halaman Gallery
     public function gallery()
     {
-        return view('user.gallery');
+        // Ambil semua data gambar
+        $data['galleries'] = DB::table('galleries')->get();
+
+        return view('user.gallery', $data);
     }
 
     // Halaman Company Profile

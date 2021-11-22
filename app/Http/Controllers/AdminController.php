@@ -19,7 +19,16 @@ class AdminController extends Controller
     // Halaman Dashboard
     public function dashboard()
     {
-        return view('admin.dashboard');
+        // Hitung jumlah data pengguna
+        $data['usersCount'] = DB::table('users')->count();
+
+        // Hitung jumlah data news
+        $data['newsCount'] = DB::table('news')->count();
+
+        // Hitung jumlah data galleries
+        $data['galleriesCount'] = DB::table('galleries')->count();
+
+        return view('admin.dashboard', $data);
     }
 
     // Halaman News
