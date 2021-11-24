@@ -52,11 +52,16 @@ class UserController extends Controller
     }
 
     // Halaman Virtual Tour
-    public function virtualTour()
+    public function virtualTourFoto()
     {
-        return view('user.virtual-tour');
+        return view('user.virtual-tour-foto');
     }
 
+    // Halaman Virtual Tour
+    public function virtualTourVideo()
+    {
+        return view('user.virtual-tour-video');
+    }
 
     // Halaman Contact
     public function contact()

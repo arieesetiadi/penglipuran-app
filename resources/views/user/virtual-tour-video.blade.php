@@ -36,8 +36,7 @@
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('user/icon/apple-touch-icon-158-precomposed.png') }}">
 
-
-    <title>Product - Desa Penglipuran</title>
+    <title>Virtual Tour 360 Video - Desa Penglipuran</title>
 </head>
 
 <body class="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
@@ -74,7 +73,7 @@
                                         <a href="{{ url('news') }}">NEWS</a>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children current-menu-item">
+                                    <li class="menu-item menu-item-has-children ">
                                         <a href="{{ url('product') }}">PRODUCT</a>
                                     </li>
 
@@ -94,13 +93,13 @@
                                         </ul>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children">
+                                    <li class="menu-item menu-item-has-children current-menu-item">
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
                                             <li class="menu-item ">
                                                 <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
                                             </li>
-                                            <li class="menu-item">
+                                            <li class="menu-item current-item">
                                                 <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
                                             </li>
                                         </ul>
@@ -132,95 +131,103 @@
                                 <!-- ICONBOX -->
                                 <div class="row-iconbox">
                                     <div class="container">
-                                        <h1 class="text-center my-5">Product</h1>
                                         <div class="row">
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/minuman-loloh-cemcem.jpg') }}"
-                                                            class="img-fluid rounded">
+                                            <div class="col-md-12">
+                                                <div class="themesflat-spacer clearfix" data-desktop="60"
+                                                    data-mobile="60" data-smobile="60"></div>
+                                                <div class="themesflat-headings style-1 text-center clearfix">
+                                                    <h2 class="heading d-block">HALAMAN VIRTUAL TOUR</h2>
+                                                    <div class="sep has-icon width-125 clearfix">
+                                                        <div class="sep-icon">
+                                                            <span class="sep-icon-before sep-center sep-solid"></span>
+                                                            <span class="icon-wrap"><i
+                                                                    class="autora-icon-build"></i></span>
+                                                            <span class="sep-icon-after sep-center sep-solid"></span>
+                                                        </div>
                                                     </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Minuman Loloh Cemcem</p>
-                                            </div>
+                                                    <p class="sub-heading">More than 500 projects completed in
+                                                        Autora
+                                                        -
+                                                        With over 25 years of combined experience, we have the knowledge
+                                                        to serve you.</p>
+                                                </div>
+                                                <div class="themesflat-spacer clearfix" data-desktop="42"
+                                                    data-mobile="35" data-smobile="35"></div>
+                                            </div><!-- /.col-md-12 -->
+                                        </div><!-- /.row -->
 
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/minuman-jamu-kunyit-crop.png') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Minuman Jamu Kunyit</p>
-                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
+                                                    data-mobilemargin="0 0 0 0">
+                                                    <div
+                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
+                                                        <div class="icon-wrap">
+                                                            <i class="autora-icon-quality"></i>
+                                                        </div>
+                                                        <div class="text-wrap">
+                                                            <h5 class="heading"><a href="#">BEST QUALITY</a></h5>
+                                                            <div class="sep clearfix"></div>
+                                                            <p class="sub-heading">Autora Construction Services are
+                                                                committed to meeting the highest quality standards
+                                                                without compromising our safety culture..</p>
+                                                        </div>
+                                                    </div><!-- /.themesflat-icon-box -->
+                                                </div><!-- /.themesflat-content-box -->
+                                            </div><!-- /.col-md-4 -->
+                                            <div class="col-md-4">
+                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
+                                                    data-smobile="35"></div>
+                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
+                                                    data-mobilemargin="0 0 0 0">
+                                                    <div
+                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
+                                                        <div class="icon-wrap">
+                                                            <i class="autora-icon-time"></i>
+                                                        </div>
+                                                        <div class="text-wrap">
+                                                            <h5 class="heading"><a href="#">ON TIME</a></h5>
+                                                            <div class="sep clearfix"></div>
+                                                            <p class="sub-heading">At our company, we respect the
+                                                                customer’s time and schedule and always complete the
+                                                                projects on timely fashion way.</p>
+                                                        </div>
+                                                    </div><!-- /.themesflat-icon-box -->
+                                                </div><!-- /.themesflat-content-box -->
+                                            </div><!-- /.col-md-4 -->
+                                            <div class="col-md-4">
+                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
+                                                    data-smobile="35"></div>
+                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
+                                                    data-mobilemargin="0 0 0 0">
+                                                    <div
+                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
+                                                        <div class="icon-wrap">
+                                                            <i class="autora-icon-author"></i>
+                                                        </div>
+                                                        <div class="text-wrap">
+                                                            <h5 class="heading"><a href="#">EXPERIENCED</a></h5>
+                                                            <div class="sep clearfix"></div>
+                                                            <p class="sub-heading">As the saying goes practice makes
+                                                                perfect. With our years of experience you can bet on us
+                                                                to get the job done exactly to your specifications.</p>
+                                                        </div>
+                                                    </div><!-- /.themesflat-icon-box -->
+                                                </div><!-- /.themesflat-content-box -->
+                                            </div><!-- /.col-md-4 -->
+                                        </div><!-- /.row -->
 
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/makanan-donat-penglipuran-crop.jpg') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Makanan Donat Penglipuran</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-kayu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Kayu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-bedeg.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Bedeg</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-anyaman-bambu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Anyaman Bambu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-akar-bambu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Akar Bambu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-tapel.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Tapel</p>
-                                            </div>
-
-
-
-
-
-
-                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="themesflat-spacer clearfix" data-desktop="41"
+                                                    data-mobile="35" data-smobile="35"></div>
+                                                <div class="elm-button text-center">
+                                                    <a href="#" class="themesflat-button bg-accent">ABOUT US</a>
+                                                </div>
+                                                <div class="themesflat-spacer clearfix" data-desktop="73"
+                                                    data-mobile="60" data-smobile="60"></div>
+                                            </div><!-- /.col-md-12 -->
+                                        </div><!-- /.row -->
                                     </div><!-- /.container -->
                                 </div>
                                 <!-- END ICONBOX -->

@@ -95,7 +95,15 @@
                                     </li>
 
                                     <li class="menu-item menu-item-has-children">
-                                        <a href="{{ url('virtual-tour') }}">VIRTUAL TOUR 360<sup>o</sup></a>
+                                        <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item ">
+                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-has-children ">
@@ -121,8 +129,8 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <div class="container py-5">
-                                    <h1 class="text-center">Gallery</h1>
+                                <div class="container pb-5">
+                                    <h1 class="text-center my-5">Gallery</h1>
                                     <div class="row">
                                         @foreach ($galleries as $gallery)
                                             <div class="col-4">

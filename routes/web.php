@@ -81,8 +81,11 @@ Route::get('/gallery', [UserController::class, 'gallery']);
 // Halaman Company Profile
 Route::get('/company-profile', [UserController::class, 'companyProfile']);
 
-// Halaman Virtual Tour
-Route::get('/virtual-tour', [UserController::class, 'virtualTour']);
+// Halaman Virtual Tour Foto
+Route::get('/virtual-tour-foto', [UserController::class, 'virtualTourFoto']);
+
+// Halaman Virtual Tour Video
+Route::get('/virtual-tour-video', [UserController::class, 'virtualTourVideo']);
 
 // Halaman Kontak
 Route::get('/contact', [UserController::class, 'contact']);

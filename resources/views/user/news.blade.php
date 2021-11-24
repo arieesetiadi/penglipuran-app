@@ -94,8 +94,16 @@
                                         </ul>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('virtual-tour') }}">VIRTUAL TOUR 360<sup>o</sup></a>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item ">
+                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-has-children ">
@@ -126,14 +134,14 @@
                                         @foreach ($news as $news)
                                             <center>
                                                 <div>
-                                                <h2>{{ $news->title }}</h2>
-                                                <img src="{{ asset('admin/img/news/' . $news->image) }}"
-                                                    alt="Gambar Berita" class="my-2">
-                                                <p class="d-block mt-4 text-justify">{{ $news->content }}</p>
-                                                <div class="my-5">
-                                                    <hr>
+                                                    <h2>{{ $news->title }}</h2>
+                                                    <img src="{{ asset('admin/img/news/' . $news->image) }}"
+                                                        alt="Gambar Berita" class="my-2">
+                                                    <p class="d-block mt-4 text-justify">{{ $news->content }}</p>
+                                                    <div class="my-5">
+                                                        <hr>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             </center>
                                         @endforeach
                                     </div><!-- /.container -->
