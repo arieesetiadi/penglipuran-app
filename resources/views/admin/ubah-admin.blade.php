@@ -185,7 +185,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Admin</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Ubah Admin</h1>
 
                     {{-- Body --}}
                     <div class="container-fluid">

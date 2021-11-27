@@ -97,11 +97,12 @@
                                     <li class="menu-item menu-item-has-children">
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                            <li class="menu-item">
+                                                <a href="{{ url('virtual-tour-foto') }}">VIRTUAL TOUR INTERAKTIF</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                                <a href="{{ url('virtual-tour-video') }}">VIDEO VIRTUAL TOUR
+                                                    360<sup>o</sup></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -135,7 +136,7 @@
                                             <!-- Slide 1 -->
                                             <li data-transition="">
                                                 <!-- Main Image -->
-                                                <img src="{{ asset('user/img/penglipuran/penglipuran1.jpg') }}"
+                                                <img src="{{ asset('user/img/penglipuran/penglipuran-3.jpg') }}"
                                                     alt="" data-bgposition="center center" data-no-retina>
 
                                                 <!-- Layers -->
@@ -209,108 +210,169 @@
                                 </div>
                                 <!-- END SLIDER -->
 
-                                <!-- ICONBOX -->
-                                <div class="row-iconbox">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="themesflat-spacer clearfix" data-desktop="60"
-                                                    data-mobile="60" data-smobile="60"></div>
-                                                <div class="themesflat-headings style-1 text-center clearfix">
-                                                    <h2 class="heading">YOUR BEST CHOOSE</h2>
-                                                    <div class="sep has-icon width-125 clearfix">
-                                                        <div class="sep-icon">
-                                                            <span class="sep-icon-before sep-center sep-solid"></span>
-                                                            <span class="icon-wrap"><i
-                                                                    class="autora-icon-build"></i></span>
-                                                            <span class="sep-icon-after sep-center sep-solid"></span>
-                                                        </div>
-                                                    </div>
-                                                    <p class="sub-heading">More than 500 projects completed in Autora
-                                                        -
-                                                        With over 25 years of combined experience, we have the knowledge
-                                                        to serve you.</p>
-                                                </div>
-                                                <div class="themesflat-spacer clearfix" data-desktop="42"
-                                                    data-mobile="35" data-smobile="35"></div>
-                                            </div><!-- /.col-md-12 -->
-                                        </div><!-- /.row -->
+                                <div class="container my-5">
+                                    <hr>
+                                    {{-- Lokasi --}}
+                                    <div class="row my-5">
+                                        <div class="col-9">
+                                            <h1>Lokasi Desa Penglipuran</h1>
+                                            <p class="text-justify">Lokasi lokasi desa adat Penglipuran, berada di
+                                                desa Kubu, kabupaten Bangli, provinsi Bali. Mungkin banyak dari anda
+                                                tidak tahu, kabupaten Bangli di Bali bagian mana. Jika anda pernah
+                                                wisata ke tempat wisata Kintamani atau Gunung Batur, inilah wilayah
+                                                kabupaten Bangli.</p>
+                                            <p class="text-justify">Lokasi desa penglipuran Bangli berada berada pada
+                                                dataran tinggi di ketinggian sekitar 600 – 700 meter dari permukaan
+                                                laut. Akibat berada di posisi ketinggian ini, membuat udara sejuk akan
+                                                terbayang oleh anda. Ingin melihat peta lokasi desa Penglipuran Bangli?
+                                                Mohon gunakan Google Map dengan cara mengklik link di bawah ini!</p>
+                                            <p>
+                                                Google Maps : <a target="_blank" class="text-primary"
+                                                    href="https://goo.gl/maps/Ch1KFijidYZYDLNz7">Desa
+                                                    Penglipuran</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-3">
+                                            <center>
+                                                <img width="200px" style="margin-top: 20px"
+                                                    src="{{ asset('user/icon/map.png') }}" alt="Maps">
+                                            </center>
+                                        </div>
+                                    </div>
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-quality"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">BEST QUALITY</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">Autora Construction Services are
-                                                                committed to meeting the highest quality standards
-                                                                without compromising our safety culture..</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                            <div class="col-md-4">
-                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
-                                                    data-smobile="35"></div>
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-time"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">ON TIME</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">At our company, we respect the
-                                                                customer’s time and schedule and always complete the
-                                                                projects on timely fashion way.</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                            <div class="col-md-4">
-                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
-                                                    data-smobile="35"></div>
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-author"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">EXPERIENCED</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">As the saying goes practice makes
-                                                                perfect. With our years of experience you can bet on us
-                                                                to get the job done exactly to your specifications.</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                        </div><!-- /.row -->
+                                    {{-- Harga Tiket --}}
+                                    <div class="row my-5">
+                                        <div class="col-3">
+                                            <center>
+                                                <img width="200px" style="margin-top: 20px"
+                                                    src="{{ asset('user/icon/price-tag.png') }}" alt="Maps">
+                                            </center>
+                                        </div>
+                                        <div class="col-9">
+                                            <h1>Harga Tiket Masuk 2021</h1>
+                                            <p class="text-justify">Tercatat rata-rata 100 orang wisatawan yang
+                                                berkunjung ke desa Penglipuran Bangli. Untuk dapat memasuki desa
+                                                Penglipuran, anda akan di kenakan biaya tiket masuk. Lalu berapa harga
+                                                tiket masuk desa Penglipuran terbaru? Silakan di lihat di tabel di bawah
+                                                ini!
+                                            </p>
+                                            <table class="table" border="0">
+                                                <tr>
+                                                    <th>Kategori</th>
+                                                    <th>Indonesia</th>
+                                                    <th>Asing</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dewasa</td>
+                                                    <td>Rp. 25.000,00</td>
+                                                    <td>Rp. 30.000,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anak-anak</td>
+                                                    <td>Rp. 20.000,00</td>
+                                                    <td>Rp. 25.000,00</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
 
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="themesflat-spacer clearfix" data-desktop="41"
-                                                    data-mobile="35" data-smobile="35"></div>
-                                                <div class="elm-button text-center">
-                                                    <a href="#" class="themesflat-button bg-accent">ABOUT US</a>
-                                                </div>
-                                                <div class="themesflat-spacer clearfix" data-desktop="73"
-                                                    data-mobile="60" data-smobile="60"></div>
-                                            </div><!-- /.col-md-12 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.container -->
+                                    <hr>
+
+                                    {{-- Keunikan --}}
+                                    <div class="row my-5">
+                                        <div class="col">
+                                            <center>
+                                                <h1>Keunikan Desa Wisata Penglipuran</h1>
+                                            </center>
+
+                                            <p class="text-justify">Tentunya sebelum mengunjungi sebuah objek wisata
+                                                di
+                                                Bali, pasti anda ingin tahu hal apa saja yang menarik untuk dilihat.
+                                                Jika
+                                                anda berminat untuk melihat keunikan sebuah desa yang masih
+                                                memperlihatkan
+                                                suasana Bali asli. Maka kabupaten Bangli dan objek wisata di Bali timur
+                                                yang
+                                                wajib anda kunjungi. Karena wilayah kabupaten Bangli dan objek wisata di
+                                                Bali timur salah satunya desa Tenganan masih kental nuasa Bali asli dan
+                                                belum banyak mendapatkan pengaruh modern. Tahukah anda, desa adat
+                                                Penglipuran Bangli di gunakan sebagai contoh pertama sebagai desa wisata
+                                                di
+                                                Indonesia oleh pemerintah daerah pada tahun 1995.</p>
+                                            <p class="text-justify">Bagi yang pertama kali berlibur ke desa
+                                                Penglipuran
+                                                Bangli, pastinya akan terkejut melihat bentuk dari tiap-tiap rumah
+                                                penduduk
+                                                hampir sama. Kemiripan dari tiap-tiap rumah terlihat pada pintu gerbang
+                                                rumah, atap rumah dan dinding rumah menggunakan bambu, lebar pintu
+                                                gerbang
+                                                yang hanya muat untuk satu orang dewasa. Di masyarakat Bali pintu jenis
+                                                ini
+                                                di sebut angkul-angkul. Tidak hanya bentuk rumah yang sama, pembagian
+                                                dari
+                                                masing-masing tata ruang rumah juga sama, seperti kamar tidur dan dapur.
+                                                Cat
+                                                tembok pintu gerbang yang di gunakan bukan cat tembok yang biasanya kita
+                                                kenal, melainkan menggunakan cat berbahan dasar dari tanah liat.</p>
+                                            <p class="text-justify">Saya tidak tahu pasti tujuan dari tiap-tiap rumah
+                                                penduduk memiliki kemiripan. Pendapat pribadi saya, sepertinya mereka
+                                                ingin
+                                                membangun kebersamaan dan mempertahankan kosep berpadu dengan alam. Pada
+                                                bulan Oktober 2014, saya berlibur ke desa Penglipuran Bangli dan melihat
+                                                ada
+                                                beberapa dinding kamar yang telah berubah menggunakan batu bata. Padahal
+                                                dulunya saat berlibur kesini pada tahun 1998, semua dinding kamar
+                                                menggunakan bambu.</p>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    {{-- Budaya Penduduk --}}
+                                    <div class="row my-5">
+                                        <div class="col">
+                                            <center>
+                                                <h1>Budaya Penduduk</h1>
+                                            </center>
+
+                                            <p class="text-justify">Budaya pengelompokan dari tata ruang desa sangat
+                                                terlihat di sini. Di bagian utara dan letaknya lebih tinggi dari rumah
+                                                penduduk terdapat pura Desa yang di sebut pura Penataran. Pada bagian
+                                                tengah
+                                                desa yang letaknya di bawah pura, adalah zona tempat
+                                                penduduk. Saat ini desa di huni oleh 226 kepala keluarga dan untuk
+                                                nafkah
+                                                sehari-hari penduduk desa berprofesi sebagai petani, pengerajin anyaman
+                                                bambu dan berternak. Luas dari area desa sekitar 112 hektar dan tidak
+                                                semua
+                                                lahan desa di gunakan sebagai rumah penduduk. Sekitar 40 % dari lahan
+                                                desa
+                                                adalah hutan bambu. Menebang pohon bambu di desa ini tidak boleh
+                                                sembarangan
+                                                tanpa ijin dari tokoh masyarakat setempat.</p>
+                                            <p class="text-justify">Selain memiliki budaya menghormati alam, penduduk
+                                                desa
+                                                Penglipuran Bangli juga memiliki budaya dan tradisi untuk menghormati
+                                                wanita. Karena adanya aturan desa yang melarang pria untuk melakukan
+                                                poligami, jika ketahuan melakukan poligami maka akan mendapatkan hukuman
+                                                di
+                                                kucilkan dari desa. Desa ini juga memiliki budaya hukuman untuk
+                                                pencurian.
+                                                Bagi yang ketahuan mencuri, akan di hukum untuk memberikan sesajen lima
+                                                ekor
+                                                ayam dengan warna bulu ayam yang berbeda di 4 pura leluhur mereka.
+                                                Dengan
+                                                cara ini, semua penduduk desa akan mengetahui siapa yang mencuri,
+                                                tentunya
+                                                akan membuat efek malu. Zona yang terakhir atau yang ketiga di sebut
+                                                setra
+                                                atau kuburan. Walaupun penduduk desa Penglipuran Bali memeluk agama
+                                                Hindu
+                                                tapi penduduk desa Penglipuran Bangli tidak mengenal upacara pembakaran
+                                                mayat, jadi mayat langsung di kubur.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- END ICONBOX -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->

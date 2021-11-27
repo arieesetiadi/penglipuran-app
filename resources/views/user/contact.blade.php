@@ -96,11 +96,12 @@
                                     <li class="menu-item menu-item-has-children">
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                            <li class="menu-item">
+                                                <a href="{{ url('virtual-tour-foto') }}">VIRTUAL TOUR INTERAKTIF</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                                <a href="{{ url('virtual-tour-video') }}">VIDEO VIRTUAL TOUR
+                                                    360<sup>o</sup></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -128,108 +129,70 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <!-- ICONBOX -->
-                                <div class="row-iconbox">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="themesflat-spacer clearfix" data-desktop="60"
-                                                    data-mobile="60" data-smobile="60"></div>
-                                                <div class="themesflat-headings style-1 text-center clearfix">
-                                                    <h2 class="heading">CONTACT</h2>
-                                                    <div class="sep has-icon width-125 clearfix">
-                                                        <div class="sep-icon">
-                                                            <span class="sep-icon-before sep-center sep-solid"></span>
-                                                            <span class="icon-wrap"><i
-                                                                    class="autora-icon-build"></i></span>
-                                                            <span class="sep-icon-after sep-center sep-solid"></span>
-                                                        </div>
-                                                    </div>
-                                                    <p class="sub-heading">More than 500 projects completed in Autora
-                                                        -
-                                                        With over 25 years of combined experience, we have the knowledge
-                                                        to serve you.</p>
-                                                </div>
-                                                <div class="themesflat-spacer clearfix" data-desktop="42"
-                                                    data-mobile="35" data-smobile="35"></div>
-                                            </div><!-- /.col-md-12 -->
-                                        </div><!-- /.row -->
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-quality"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">BEST QUALITY</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">Autora Construction Services are
-                                                                committed to meeting the highest quality standards
-                                                                without compromising our safety culture..</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                            <div class="col-md-4">
-                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
-                                                    data-smobile="35"></div>
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-time"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">ON TIME</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">At our company, we respect the
-                                                                customer’s time and schedule and always complete the
-                                                                projects on timely fashion way.</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                            <div class="col-md-4">
-                                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0"
-                                                    data-smobile="35"></div>
-                                                <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px"
-                                                    data-mobilemargin="0 0 0 0">
-                                                    <div
-                                                        class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
-                                                        <div class="icon-wrap">
-                                                            <i class="autora-icon-author"></i>
-                                                        </div>
-                                                        <div class="text-wrap">
-                                                            <h5 class="heading"><a href="#">EXPERIENCED</a></h5>
-                                                            <div class="sep clearfix"></div>
-                                                            <p class="sub-heading">As the saying goes practice makes
-                                                                perfect. With our years of experience you can bet on us
-                                                                to get the job done exactly to your specifications.</p>
-                                                        </div>
-                                                    </div><!-- /.themesflat-icon-box -->
-                                                </div><!-- /.themesflat-content-box -->
-                                            </div><!-- /.col-md-4 -->
-                                        </div><!-- /.row -->
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="themesflat-spacer clearfix" data-desktop="41"
-                                                    data-mobile="35" data-smobile="35"></div>
-                                                <div class="elm-button text-center">
-                                                    <a href="#" class="themesflat-button bg-accent">ABOUT US</a>
-                                                </div>
-                                                <div class="themesflat-spacer clearfix" data-desktop="73"
-                                                    data-mobile="60" data-smobile="60"></div>
-                                            </div><!-- /.col-md-12 -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.container -->
+                                <div class="container">
+                                    <h1 class="text-center my-5">CONTACT</h1>
+                                    <div class="row mb-5">
+                                        <div class="col">
+                                            <center>
+                                                <img width="400px"
+                                                    src="{{ asset('user/img/header-penglipuran.png') }}"
+                                                    alt="Header">
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <center>
+                                                <p class="text-justify w-75">Desa Wisata Penglipuran merupakan salah
+                                                    satu
+                                                    destinasi wisata unggulan di indonesia khusus di pulau bali. Wisata
+                                                    desa
+                                                    yang memiliki kualitas yang telah diakui oleh turis mancanegara.
+                                                    Desa
+                                                    wisata penglipuran juga mendapatkan apresiasi sebagai desa terbersih
+                                                    di
+                                                    dunia. Jika anda ingin mengetahui tentang desa wisata penglipuran,
+                                                    anda
+                                                    dapat menghubungi kontak dibawah ini.</p>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <center>
+                                        <div class="row my-5 py-4 w-75">
+                                            <div class="col-3">
+                                                <img width="50px" src="{{ asset('user/icon/gmail.png') }}"
+                                                    alt="Gmail">
+                                                <p class="mt-4" class="text-center">
+                                                    dewipenglipuran@gmail.com</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <img width="50px" src="{{ asset('user/icon/whatsapp.png') }}"
+                                                    alt="Whatsapp">
+                                                <p class="mt-4" class="text-center">082144917761</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <img width="50px" src="{{ asset('user/icon/instagram.png') }}"
+                                                    alt="Instagram">
+                                                <p class="mt-4">
+                                                    <a target="_blank"
+                                                        href="https://www.instagram.com/desa_adat_penglipuran">Desa Adat
+                                                        Penglipuran
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="col-3">
+                                                <img width="50px" src="{{ asset('user/icon/facebook.png') }}"
+                                                    alt="Facebook">
+                                                <p class="mt-4">
+                                                    <a target="_blank" href="https://www.facebook.com/penglipuran.net">
+                                                        Penglipuran Net
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </center>
                                 </div>
-                                <!-- END ICONBOX -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->
@@ -238,7 +201,7 @@
 
             {{-- Import Footer --}}
             <!-- Bottom -->
-            <div id="bottom" class="clearfix has-spacer">
+            <div id="bottom" class="clearfix has-spacer mt-5">
                 <div id="bottom-bar-inner" class="container">
                     <div class="bottom-bar-inner-wrap">
                         <div class="d-flex justify-content-center">

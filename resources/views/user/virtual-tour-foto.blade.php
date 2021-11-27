@@ -97,10 +97,11 @@
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
                                             <li class="menu-item current-item">
-                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                                <a href="{{ url('virtual-tour-foto') }}">VIRTUAL TOUR INTERAKTIF</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                                <a href="{{ url('virtual-tour-video') }}">VIDEO VIRTUAL TOUR
+                                                    360<sup>o</sup></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -128,15 +129,13 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <!-- ICONBOX -->
                                 <div class="row-iconbox">
                                     <div class="container pb-5">
-                                        <h1 class="text-center my-5">Virtual Tour 360<sup>o</sup> Foto</h1>
+                                        <h1 class="text-center my-5">VIRTUAL TOUR INTERAKTIF</h1>
                                         <iframe src="https://app.lapentor.com/sphere/penglipuran" width="100%"
                                             height="500px" allowfullscreen="true" class="rounded"></iframe>
                                     </div><!-- /.container -->
                                 </div>
-                                <!-- END ICONBOX -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->

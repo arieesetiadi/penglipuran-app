@@ -97,11 +97,12 @@
                                     <li class="menu-item menu-item-has-children">
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item ">
-                                                <a href="{{ url('virtual-tour-foto') }}">360<sup>o</sup> FOTO</a>
+                                            <li class="menu-item">
+                                                <a href="{{ url('virtual-tour-foto') }}">VIRTUAL TOUR INTERAKTIF</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{ url('virtual-tour-video') }}">360<sup>o</sup> VIDEO</a>
+                                                <a href="{{ url('virtual-tour-video') }}">VIDEO VIRTUAL TOUR
+                                                    360<sup>o</sup></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -130,7 +131,7 @@
                             <div class="page-content">
 
                                 <div class="container pb-5">
-                                    <h1 class="text-center my-5">Gallery</h1>
+                                    <h1 class="text-center my-5">GALLERY</h1>
                                     <div class="row">
                                         @foreach ($galleries as $gallery)
                                             <div class="col-4">
