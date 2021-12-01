@@ -62,7 +62,7 @@ class AdminController extends Controller
         if ($image != null) {
             $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
             // Proses upload gambar
-            $image->move(public_path('admin/img/news'), $imageName);
+            $image->move('admin/img/news/', $imageName);
         }
 
         // Insert data ke database News
@@ -104,7 +104,7 @@ class AdminController extends Controller
         if ($image != null) {
             // Proses upload gambar
             $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
-            $image->move(public_path('admin/img/news'), $imageName);
+            $image->move('admin/img/news/', $imageName);
 
             // Insert data ke database News
             DB::table('news')
@@ -139,7 +139,7 @@ class AdminController extends Controller
         $news = DB::table('news')->where('id', $id);
 
         // Hapus gambar dari news
-        File::delete(public_path('admin\img\news\\') . $news->get()[0]->image);
+        File::delete('admin/img/news/' . $news->get()[0]->image);
 
         // Hapus data dari database news
         $news->delete();
@@ -168,7 +168,7 @@ class AdminController extends Controller
         $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
 
         // Proses upload gambar
-        $image->move(public_path('admin/img/gallery'), $imageName);
+        $image->move('admin/img/gallery/', $imageName);
 
         // Masukan data ke database Galleries
         DB::table('galleries')->insert([
@@ -209,7 +209,7 @@ class AdminController extends Controller
         if ($image != null) {
             // Proses upload gambar
             $imageName = time() . ' ' . strtolower($image->getClientOriginalName());
-            $image->move(public_path('admin/img/gallery'), $imageName);
+            $image->move('admin/img/gallery/', $imageName);
 
             // Insert data ke database galleries
             DB::table('galleries')
@@ -240,7 +240,7 @@ class AdminController extends Controller
         $gallery = DB::table('galleries')->where('id', $id);
 
         // Hapus gambar dari gallery
-        File::delete(public_path('admin\img\gallery\\') . $gallery->get()[0]->image);
+        File::delete('admin/img/gallery/' . $gallery->get()[0]->image);
 
         // Hapus data gallery dari database Gallery
         $gallery->delete();

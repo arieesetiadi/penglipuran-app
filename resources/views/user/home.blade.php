@@ -136,7 +136,7 @@
                                             <!-- Slide 1 -->
                                             <li data-transition="">
                                                 <!-- Main Image -->
-                                                <img src="{{ asset('user/img/penglipuran/penglipuran-3.jpg') }}"
+                                                <img src="{{ asset('user/img/penglipuran/penglipuran-3.JPG') }}"
                                                     alt="" data-bgposition="center center" data-no-retina>
 
                                                 <!-- Layers -->
@@ -265,12 +265,12 @@
                                                 <tr>
                                                     <td>Dewasa</td>
                                                     <td>Rp. 25.000,00</td>
-                                                    <td>Rp. 30.000,00</td>
+                                                    <td>Rp. 50.000,00</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Anak-anak</td>
-                                                    <td>Rp. 20.000,00</td>
-                                                    <td>Rp. 25.000,00</td>
+                                                    <td>Rp. 15.000,00</td>
+                                                    <td>Rp. 30.000,00</td>
                                                 </tr>
                                             </table>
                                         </div>
