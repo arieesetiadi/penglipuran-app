@@ -132,8 +132,10 @@
                                 <div class="row-iconbox">
                                     <div class="container pb-5">
                                         <h1 class="text-center my-5">VIDEO VIRTUAL TOUR 360<sup>o</sup></h1>
-                                        <iframe src="https://app.lapentor.com/sphere/penglipuran" width="100%"
-                                            height="500px" allowfullscreen="true" class="rounded"></iframe>
+                                        <iframe
+                                            src="https://momento360.com/e/u/125062dd87164c2082dcf833cd8ded52?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=82.5&size=medium"
+                                            width="100%" height="500px" allowfullscreen="true"
+                                            class="rounded"></iframe>
                                     </div><!-- /.container -->
                                 </div>
                             </div><!-- /.page-content -->
