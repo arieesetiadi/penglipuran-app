@@ -129,25 +129,21 @@
                     <div id="site-content" class="site-content clearfix">
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
-                                <!-- ICONBOX -->
-                                <div class="row-iconbox">
-                                    <div class="container w-75 py-5">
-                                        @foreach ($news as $news)
-                                            <center>
-                                                <div>
-                                                    <h2>{{ $news->title }}</h2>
-                                                    <img src="{{ asset('admin/img/news/' . $news->image) }}"
-                                                        alt="Gambar Berita" class="my-2">
-                                                    <p class="d-block mt-4 text-justify">{{ $news->content }}</p>
-                                                    <div class="my-5">
-                                                        <hr>
-                                                    </div>
+                                <div class="container w-75 py-5">
+                                    @foreach ($news as $news)
+                                        <center>
+                                            <div>
+                                                <h2>{{ $news->title }}</h2>
+                                                <img src="{{ asset('admin/img/news/' . $news->image) }}"
+                                                    alt="Gambar Berita" class="my-2">
+                                                <p class="d-block mt-4 text-justify">{{ $news->content }}</p>
+                                                <div class="my-5">
+                                                    <hr>
                                                 </div>
-                                            </center>
-                                        @endforeach
-                                    </div><!-- /.container -->
-                                </div>
-                                <!-- END ICONBOX -->
+                                            </div>
+                                        </center>
+                                    @endforeach
+                                </div><!-- /.container -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->
@@ -205,7 +201,12 @@
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
 
+    <script>
+        let height = screen.height;
+        let container = document.querySelector('.page-content > .container');
 
+        container.style.minHeight = "" + (height - 300) + "px";
+    </script>
 </body>
 
 </html>

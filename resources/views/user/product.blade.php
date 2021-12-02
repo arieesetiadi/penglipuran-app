@@ -130,101 +130,97 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <!-- ICONBOX -->
-                                <div class="row-iconbox">
-                                    <div class="container">
-                                        <h1 class="text-center my-5">PRODUCT</h1>
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/minuman-loloh-cemcem.jpg') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Minuman Loloh Cemcem</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/minuman-jamu-kunyit-crop.png') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Minuman Jamu Kunyit</p>
-                                            </div>
-
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/makanan-donat-penglipuran-crop.jpg') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Makanan Donat Penglipuran</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-kayu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Kayu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-bedeg.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Bedeg</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-anyaman-bambu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Anyaman Bambu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-akar-bambu.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Akar Bambu</p>
-                                            </div>
-
-                                            <div class="col-4">
-                                                <center>
-                                                    <div class="rounded-lg shadow border">
-                                                        <img src="{{ asset('user/img/product/kerajinan-tapel.JPG') }}"
-                                                            class="img-fluid rounded">
-                                                    </div>
-                                                </center>
-                                                <p class="text-center mt-3 mb-5">Kerajinan Tapel</p>
-                                            </div>
-
-
-
-
-
-
+                                <div class="container">
+                                    <h1 class="text-center my-5">PRODUCT</h1>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/minuman-loloh-cemcem.jpg') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Minuman Loloh Cemcem</p>
                                         </div>
-                                    </div><!-- /.container -->
-                                </div>
-                                <!-- END ICONBOX -->
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/minuman-jamu-kunyit-crop.png') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Minuman Jamu Kunyit</p>
+                                        </div>
+
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/makanan-donat-penglipuran-crop.jpg') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Makanan Donat Penglipuran</p>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/kerajinan-kayu.JPG') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Kerajinan Kayu</p>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/kerajinan-bedeg.JPG') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Kerajinan Bedeg</p>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/kerajinan-anyaman-bambu.JPG') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Kerajinan Anyaman Bambu</p>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/kerajinan-akar-bambu.JPG') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Kerajinan Akar Bambu</p>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <center>
+                                                <div class="rounded-lg shadow border">
+                                                    <img src="{{ asset('user/img/product/kerajinan-tapel.JPG') }}"
+                                                        class="img-fluid rounded">
+                                                </div>
+                                            </center>
+                                            <p class="text-center mt-3 mb-5">Kerajinan Tapel</p>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div><!-- /.container -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->
@@ -282,7 +278,12 @@
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
 
+    <script>
+        let height = screen.height;
+        let container = document.querySelector('.page-content > .container');
 
+        container.style.minHeight = "" + (height - 300) + "px";
+    </script>
 </body>
 
 </html>

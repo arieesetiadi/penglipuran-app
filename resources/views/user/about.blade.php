@@ -130,47 +130,45 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <div class="row-iconbox">
-                                    <div class="container">
-                                        <h1 class="text-center my-5">ABOUT</h1>
-                                        <div class="row mb-3">
-                                            <div class="col">
-                                                <center>
-                                                    <img width="150px"
-                                                        src="{{ asset('user/icon/Profile/man-1.png') }}" alt="">
-                                                    <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
+                                <div class="container">
+                                    <h1 class="text-center my-5">ABOUT</h1>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <center>
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
 
-                                                </center>
-                                            </div>
+                                            </center>
                                         </div>
-                                        <div class="row my-5">
-                                            <div class="col-6">
-                                                <center>
-                                                    <h6 class="mb-5">DOSEN PEMBIMBING 1</h6>
-                                                    <img width="150px"
-                                                        src="{{ asset('user/icon/Profile/man-3.png') }}" alt="">
-                                                    <h6 class="mt-4">BAGUS MADE SABDA NIRMALA, S.Si., M.Eng
-                                                    </h6>
-                                                </center>
-                                            </div>
-                                            {{-- <div class="col-2">
+                                    </div>
+                                    <div class="row my-5">
+                                        <div class="col-6">
+                                            <center>
+                                                <h6 class="mb-5">DOSEN PEMBIMBING 1</h6>
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-3.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">BAGUS MADE SABDA NIRMALA, S.Si., M.Eng
+                                                </h6>
+                                            </center>
+                                        </div>
+                                        {{-- <div class="col-2">
                                                 <center>
                                                     <img class="mt-5" width="100px"
                                                         src="{{ asset('user/icon/Profile/versus.png') }}" alt="">
                                                 </center>
                                             </div> --}}
-                                            <div class="col-6">
-                                                <center>
-                                                    <h6 class="mb-5">DOSEN PEMBIMBING 2</h6>
-                                                    <img width="150px"
-                                                        src="{{ asset('user/icon/Profile/man-2.png') }}" alt="">
-                                                    <h6 class="mt-4">I KOMANG TRY ADI STANAYA, S.Kom., M.Kom
-                                                    </h6>
-                                                </center>
-                                            </div>
+                                        <div class="col-6">
+                                            <center>
+                                                <h6 class="mb-5">DOSEN PEMBIMBING 2</h6>
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-2.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">I KOMANG TRY ADI STANAYA, S.Kom., M.Kom
+                                                </h6>
+                                            </center>
                                         </div>
-
                                     </div>
+
                                 </div>
 
                             </div><!-- /.page-content -->
@@ -230,6 +228,12 @@
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
 
+    <script>
+        let height = screen.height;
+        let container = document.querySelector('.page-content > .container');
+
+        container.style.minHeight = "" + (height - 300) + "px";
+    </script>
 
 </body>
 

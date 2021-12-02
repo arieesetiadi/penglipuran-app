@@ -128,14 +128,11 @@
                     <div id="site-content" class="site-content clearfix">
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
-
-                                <div class="row-iconbox">
-                                    <div class="container pb-5">
-                                        <h1 class="text-center my-5">VIRTUAL TOUR INTERAKTIF</h1>
-                                        <iframe src="https://app.lapentor.com/sphere/penglipuran" width="100%"
-                                            height="500px" allowfullscreen="true" class="rounded"></iframe>
-                                    </div><!-- /.container -->
-                                </div>
+                                <div class="container pb-5">
+                                    <h1 class="text-center my-5">VIRTUAL TOUR INTERAKTIF</h1>
+                                    <iframe src="https://app.lapentor.com/sphere/penglipuran" width="100%"
+                                        height="500px" allowfullscreen="true" class="rounded"></iframe>
+                                </div><!-- /.container -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->
@@ -193,7 +190,12 @@
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
 
+    <script>
+        let height = screen.height;
+        let container = document.querySelector('.page-content > .container');
 
+        container.style.minHeight = "" + (height - 300) + "px";
+    </script>
 </body>
 
 </html>

@@ -136,7 +136,7 @@
                                             <!-- Slide 1 -->
                                             <li data-transition="">
                                                 <!-- Main Image -->
-                                                <img src="{{ asset('user/img/penglipuran/penglipuran-3.JPG') }}"
+                                                <img src="{{ asset('user/img/penglipuran/penglipuran1.jpg') }}"
                                                     alt="" data-bgposition="center center" data-no-retina>
 
                                                 <!-- Layers -->
@@ -430,7 +430,12 @@
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('user/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
 
+    <script>
+        let height = screen.height;
+        let container = document.querySelector('.page-content > .container');
 
+        container.style.minHeight = "" + (height - 300) + "px";
+    </script>
 </body>
 
 </html>
