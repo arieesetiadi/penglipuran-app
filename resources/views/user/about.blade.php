@@ -132,16 +132,6 @@
 
                                 <div class="container">
                                     <h1 class="text-center my-5">ABOUT</h1>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <center>
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
-                                                    alt="">
-                                                <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
-
-                                            </center>
-                                        </div>
-                                    </div>
                                     <div class="row my-5">
                                         <div class="col-6">
                                             <center>
@@ -168,7 +158,18 @@
                                             </center>
                                         </div>
                                     </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <center>
+                                                <h6 class="mb-5">MAHASISWA</h6>
 
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
+
+                                            </center>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div><!-- /.page-content -->
