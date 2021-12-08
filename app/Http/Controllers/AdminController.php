@@ -253,7 +253,9 @@ class AdminController extends Controller
     public function admin()
     {
         // Ambil semua data admin, untuk ditampilkan pada table
-        $data['admins'] = DB::table('users')->orderBy('id', 'desc')->get();
+        $data['admins'] = DB::table('users')
+            ->orderBy('id', 'desc')
+            ->get();
 
         return view('admin.admin', $data);
     }

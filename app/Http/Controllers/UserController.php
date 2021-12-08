@@ -40,7 +40,7 @@ class UserController extends Controller
     public function gallery()
     {
         // Ambil semua data gambar
-        $data['galleries'] = DB::table('galleries')->get();
+        $data['galleries'] = DB::table('galleries')->orderBy('id', 'desc')->get();
 
         return view('user.gallery', $data);
     }

@@ -313,10 +313,12 @@
                                                             class="btn btn-sm btn-white">
                                                             <i class="fas fa-pen"></i>
                                                         </a>
-                                                        <a href="/hapus-admin/{{ $admin->id }}"
-                                                            class="btn btn-sm btn-danger">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </a>
+                                                        @if ($admin->id != 1)
+                                                            <a href="/hapus-admin/{{ $admin->id }}"
+                                                                class="btn btn-sm btn-danger">
+                                                                <i class="far fa-trash-alt"></i>
+                                                            </a>
+                                                        @endif
                                                     </td>
                                                 </tr>
                                             @endforeach

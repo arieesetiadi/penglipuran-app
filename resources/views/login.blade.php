@@ -24,7 +24,12 @@
                 {{-- Form Login --}}
                 <div class="w-75">
                     <div class="d-flex justify-content-center my-4">
-                        <img src="{{ asset('admin/img/logo-penglipuran.png') }}" width="60%" alt="Logo Penglipuran">
+                        <a href="/">
+                            <center>
+                                <img src="{{ asset('admin/img/logo-penglipuran.png') }}" width="60%"
+                                    alt="Logo Penglipuran">
+                            </center>
+                        </a>
                     </div>
                     <form action="{{ url('login') }}" method="POST">
                         @csrf
