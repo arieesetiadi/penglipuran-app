@@ -136,7 +136,7 @@
                                         @foreach ($galleries as $gallery)
                                             <div class="col-4">
                                                 <center>
-                                                    <div class="rounded-lg shadow border">
+                                                    <div class="rounded">
                                                         <img src="{{ asset('admin/img/gallery/' . $gallery->image) }}"
                                                             alt="{{ $gallery->title }}" class="img-fluid rounded">
                                                     </div>

@@ -280,10 +280,8 @@
 
                                     {{-- Keunikan --}}
                                     <div class="row my-5">
-                                        <div class="col">
-                                            <center>
-                                                <h1>Keunikan Desa Wisata Penglipuran</h1>
-                                            </center>
+                                        <div class="col-8">
+                                            <h1>Keunikan Desa Wisata Penglipuran</h1>
 
                                             <p class="text-justify">Tentunya sebelum mengunjungi sebuah objek wisata
                                                 di
@@ -324,16 +322,28 @@
                                                 dulunya saat berlibur kesini pada tahun 1998, semua dinding kamar
                                                 menggunakan bambu.</p>
                                         </div>
+                                        <div class="col-4" style="margin-top: 150px">
+                                            <center>
+                                                <img width="350px" style="margin-top: 20px"
+                                                    src="{{ asset('user/img/penglipuran/keunikan.jpg') }}" alt="Maps"
+                                                    class="rounded shadow">
+                                            </center>
+                                        </div>
                                     </div>
 
                                     <hr>
 
                                     {{-- Budaya Penduduk --}}
                                     <div class="row my-5">
-                                        <div class="col">
+                                        <div class="col-4" style="margin-top: 100px">
                                             <center>
-                                                <h1>Budaya Penduduk</h1>
+                                                <img width="350px" style="margin-top: 20px"
+                                                    src="{{ asset('user/img/penglipuran/budaya.jpg') }}" alt="Maps"
+                                                    class="rounded shadow">
                                             </center>
+                                        </div>
+                                        <div class="col-8">
+                                            <h1>Budaya Penduduk</h1>
 
                                             <p class="text-justify">Budaya pengelompokan dari tata ruang desa sangat
                                                 terlihat di sini. Di bagian utara dan letaknya lebih tinggi dari rumah
