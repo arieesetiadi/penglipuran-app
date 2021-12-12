@@ -72,8 +72,11 @@ Route::get('/news', [UserController::class, 'news']);
 // Halaman Product
 Route::get('/product', [UserController::class, 'product']);
 
-// Halaman About
-Route::get('/about', [UserController::class, 'about']);
+// Halaman About Me
+Route::get('/about-me', [UserController::class, 'aboutMe']);
+
+// Halaman About Penglipuran
+Route::get('/about-penglipuran', [UserController::class, 'aboutPenglipuran']);
 
 // Halaman Gallery
 Route::get('/gallery', [UserController::class, 'gallery']);

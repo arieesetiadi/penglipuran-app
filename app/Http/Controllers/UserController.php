@@ -30,10 +30,16 @@ class UserController extends Controller
         return view('user.product');
     }
 
-    // Halaman About
-    public function about()
+    // Halaman About Me
+    public function aboutMe()
     {
-        return view('user.about');
+        return view('user.about-me');
+    }
+
+    // Halaman About Penglipuran
+    public function aboutPenglipuran()
+    {
+        return view('user.about-penglipuran');
     }
 
     // Halaman Gallery

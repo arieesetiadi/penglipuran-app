@@ -78,8 +78,16 @@
                                         <a href="{{ url('product') }}">PRODUCT</a>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('about') }}">ABOUT</a>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#">ABOUT</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="{{ url('about-penglipuran') }}">ABOUT PENGLIPURAN</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('about-me') }}">ABOUT ME</a>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-has-children">
@@ -282,7 +290,6 @@
                                     <div class="row my-5">
                                         <div class="col-8">
                                             <h1>Keunikan Desa Wisata Penglipuran</h1>
-
                                             <p class="text-justify">Tentunya sebelum mengunjungi sebuah objek wisata
                                                 di
                                                 Bali, pasti anda ingin tahu hal apa saja yang menarik untuk dilihat.

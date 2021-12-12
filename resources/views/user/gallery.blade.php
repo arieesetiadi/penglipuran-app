@@ -78,8 +78,16 @@
                                         <a href="{{ url('product') }}">PRODUCT</a>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children ">
-                                        <a href="{{ url('about') }}">ABOUT</a>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#">ABOUT</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="{{ url('about-penglipuran') }}">ABOUT PENGLIPURAN</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('about-me') }}">ABOUT ME</a>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-has-children current-menu-item">

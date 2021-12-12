@@ -36,7 +36,8 @@
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('user/icon/apple-touch-icon-158-precomposed.png') }}">
 
-    <title>Virtual Tour 360 Foto - Desa Penglipuran</title>
+
+    <title>About Me - Desa Penglipuran</title>
 </head>
 
 <body class="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
@@ -77,13 +78,13 @@
                                         <a href="{{ url('product') }}">PRODUCT</a>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children">
+                                    <li class="menu-item menu-item-has-children current-menu-item">
                                         <a href="#">ABOUT</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item">
                                                 <a href="{{ url('about-penglipuran') }}">ABOUT PENGLIPURAN</a>
                                             </li>
-                                            <li class="menu-item">
+                                            <li class="menu-item current-item">
                                                 <a href="{{ url('about-me') }}">ABOUT ME</a>
                                             </li>
                                         </ul>
@@ -101,10 +102,10 @@
                                         </ul>
                                     </li>
 
-                                    <li class="menu-item menu-item-has-children current-menu-item">
+                                    <li class="menu-item menu-item-has-children">
                                         <a href="#">VIRTUAL TOUR 360<sup>o</sup></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item current-item">
+                                            <li class="menu-item">
                                                 <a href="{{ url('virtual-tour-foto') }}">VIRTUAL TOUR INTERAKTIF</a>
                                             </li>
                                             <li class="menu-item">
@@ -136,11 +137,49 @@
                     <div id="site-content" class="site-content clearfix">
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
-                                <div class="container pb-5">
-                                    <h1 class="text-center my-5">VIRTUAL TOUR INTERAKTIF</h1>
-                                    <iframe src="https://app.lapentor.com/sphere/penglipuran" width="100%"
-                                        height="500px" allowfullscreen="true" class="rounded"></iframe>
-                                </div><!-- /.container -->
+
+                                <div class="container">
+                                    <h1 class="text-center my-5">ABOUT ME</h1>
+                                    <div class="row my-5">
+                                        <div class="col-6">
+                                            <center>
+                                                <h6 class="mb-5">DOSEN PEMBIMBING 1</h6>
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-3.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">BAGUS MADE SABDA NIRMALA, S.Si., M.Eng
+                                                </h6>
+                                            </center>
+                                        </div>
+                                        {{-- <div class="col-2">
+                                                <center>
+                                                    <img class="mt-5" width="100px"
+                                                        src="{{ asset('user/icon/Profile/versus.png') }}" alt="">
+                                                </center>
+                                            </div> --}}
+                                        <div class="col-6">
+                                            <center>
+                                                <h6 class="mb-5">DOSEN PEMBIMBING 2</h6>
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-2.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">I KOMANG TRY ADI STANAYA, S.Kom., M.Kom
+                                                </h6>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <center>
+                                                <h6 class="mb-5">MAHASISWA</h6>
+
+                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
+                                                    alt="">
+                                                <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
+
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->
                     </div><!-- /#site-content -->
@@ -204,6 +243,7 @@
 
         container.style.minHeight = "" + (height - 300) + "px";
     </script>
+
 </body>
 
 </html>

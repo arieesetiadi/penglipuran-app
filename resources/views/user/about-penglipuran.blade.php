@@ -36,8 +36,23 @@
     <link rel="shortcut icon" href="{{ asset('user/icon/favicon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('user/icon/apple-touch-icon-158-precomposed.png') }}">
 
+    <style>
+        p.main-content {
+            text-indent: 30px;
+        }
 
-    <title>About - Desa Penglipuran</title>
+        ol {
+            display: list-item;
+            margin-top: -20px;
+        }
+
+        ol li {
+            text-align: justify;
+        }
+
+    </style>
+
+    <title>About Penglipuran - Desa Penglipuran</title>
 </head>
 
 <body class="header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search">
@@ -79,7 +94,15 @@
                                     </li>
 
                                     <li class="menu-item menu-item-has-children current-menu-item">
-                                        <a href="{{ url('about') }}">ABOUT</a>
+                                        <a href="#">ABOUT</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item current-item">
+                                                <a href="{{ url('about-penglipuran') }}">ABOUT PENGLIPURAN</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="{{ url('about-me') }}">ABOUT ME</a>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-has-children">
@@ -130,44 +153,74 @@
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="page-content">
 
-                                <div class="container">
-                                    <h1 class="text-center my-5">ABOUT</h1>
+                                <div class="container w-75">
+                                    <h1 class="text-center my-5">ABOUT PENGLIPURAN</h1>
                                     <div class="row my-5">
-                                        <div class="col-6">
-                                            <center>
-                                                <h6 class="mb-5">DOSEN PEMBIMBING 1</h6>
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-3.png') }}"
-                                                    alt="">
-                                                <h6 class="mt-4">BAGUS MADE SABDA NIRMALA, S.Si., M.Eng
-                                                </h6>
-                                            </center>
-                                        </div>
-                                        {{-- <div class="col-2">
-                                                <center>
-                                                    <img class="mt-5" width="100px"
-                                                        src="{{ asset('user/icon/Profile/versus.png') }}" alt="">
-                                                </center>
-                                            </div> --}}
-                                        <div class="col-6">
-                                            <center>
-                                                <h6 class="mb-5">DOSEN PEMBIMBING 2</h6>
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-2.png') }}"
-                                                    alt="">
-                                                <h6 class="mt-4">I KOMANG TRY ADI STANAYA, S.Kom., M.Kom
-                                                </h6>
-                                            </center>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
                                         <div class="col">
-                                            <center>
-                                                <h6 class="mb-5">MAHASISWA</h6>
+                                            <div class="mb-5">
+                                                <center>
+                                                    <img src="{{ asset('user/img/penglipuran/sejarah.jpg') }}"
+                                                        alt="Sejarah Penglipuran">
+                                                </center>
+                                            </div>
 
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
-                                                    alt="">
-                                                <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
-
-                                            </center>
+                                            <p class="main-content d-inline-block text-justify">Setiap daerah atau desa
+                                                tentu
+                                                mempunyai lintasan
+                                                sejarah, di mana
+                                                biasanya tertulis dalam suatu lontar-lontar, babad-babad, prasasti dan
+                                                lain-lain. Demikian juga halnya terhadap Desa Adat Penglipuran, memiliki
+                                                lintasan sejarah tersendiri. Desa Adat Penglipuran yang merupakan salah
+                                                satu lingkungan dari Kelurahan Kubu penduduknya sebagian besar berasal
+                                                dari Desa Bayung Gede, Kecamatan Kintamani Kabupaten Dati II Bangli.</p>
+                                            <p class="main-content d-inline-block text-justify">Pada jaman kerajaan
+                                                Bangli, penduduk
+                                                Desa Bayung Gede sering ditugaskan oleh raja Bangli untuk ikut berperang
+                                                dan kegiatan lain di kerajaan. Karena Desa Bayung jauh Iokasinya dari
+                                                pusat kerajaan, akhirnya oleh raja diberi tempat dilokasi Desa Adat
+                                                Penglipuran yang sekarang, yang dibutuhkan oleh raja di setiap kegiatan
+                                                di kerajaan. Semula disebutkan dalam prasasti, bahwa Desa Adat
+                                                Penglipuran disebut “Kubu Bayung” yang berarti Pondok Bayung Gede. Lama
+                                                kelamaan penduduk desa ini membangun desa di lingkungan ini dengan
+                                                Kahyangan Tiga (tiga pura yaitu pura puseh, pura dalem dan pura
+                                                desa/balai agung) dan pura lainnya (Dang Khayangan) dibangun mirip atau
+                                                serupa dengan yang ada di Desa Bayung Gede oleh masyarakat hal ini
+                                                dimaksudkan untuk mengingat pura yang ada di Desa Bayung Gede
+                                                (Ngelingang Pura yang ada di Desa Bayung Gede). Menurut penuturan para
+                                                tokoh masyarakat, “Penglipuran” secara etimologi dijelaskan sebagai
+                                                berikut.</p>
+                                            <ol>
+                                                <li style="display: list-item">
+                                                    Penglipuran berasal dan kata
+                                                    “pangeling” dan “pura” menjadi kata
+                                                    penglipuran berarti masyarakat penglipuran membangun pura
+                                                    seperti di
+                                                    Bayung Gede untuk mengingat pura di Bayung Gede dan mengingat
+                                                    leluhurnya
+                                                </li>
+                                            </ol>
+                                            <ol>
+                                                <li style="display: list-item">
+                                                    Penglipuran berasal dan kata
+                                                    “pelipur” dan “lara” menjadi
+                                                    penglipuran, berarti penglipuran menjadi tempat menghibur di
+                                                    kala
+                                                    duka (lara) di samping karena penduduk sering dapat menghibur
+                                                    saat
+                                                    raja menghadapi masalah.
+                                                </li>
+                                            </ol>
+                                            <ol>
+                                                <li style="display: list-item">
+                                                    Penglipuran berasal dan kata
+                                                    “pangleng” dan “pura” menjadi
+                                                    penglipuran berärti bahwa barang siapa ke penglipuran akan
+                                                    melewati
+                                                    pura di empat penjuru mata angin yaitu utara, timur, selatan dan
+                                                    barat, dengan kata lain bahwa penglipuran di kelilingi oleh
+                                                    pura-pura.
+                                                </li>
+                                            </ol>
                                         </div>
                                     </div>
                                 </div>
@@ -180,11 +233,12 @@
 
             {{-- Import Footer --}}
             <!-- Bottom -->
-            <div id="bottom" class="clearfix has-spacer">
+            <div id=" bottom" class="clearfix has-spacer">
                 <div id="bottom-bar-inner" class="container">
                     <div class="bottom-bar-inner-wrap">
                         <div class="d-flex justify-content-center">
-                            <span class="text">Copyright © Desa Penglipuran 2021</span>
+                            <span class="text">Copyright © Desa Penglipuran
+                                2021</span>
                         </div><!-- /.bottom-bar-content -->
                     </div><!-- /.bottom-bar-inner-wrap -->
                 </div><!-- /#bottom-bar-inner -->
