@@ -151,10 +151,12 @@
                                     {{-- <iframe src="https://www.youtube.com/watch?v=7YWOdPh0R9Q&ab_channel=MUSICOLABORASI"
                                         width="100%" height="500px" allowfullscreen="true"
                                         class="rounded"></iframe> --}}
-                                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/7YWOdPh0R9Q"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+                                    <center>
+                                        <iframe width="956" height="538" src="https://www.youtube.com/embed/UAHrGQyFwXg"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </center>
                                 </div><!-- /.container -->
                             </div><!-- /.page-content -->
                         </div><!-- /#inner-content -->

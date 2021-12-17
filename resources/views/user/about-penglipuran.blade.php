@@ -186,41 +186,41 @@
                                                 desa/balai agung) dan pura lainnya (Dang Khayangan) dibangun mirip atau
                                                 serupa dengan yang ada di Desa Bayung Gede oleh masyarakat hal ini
                                                 dimaksudkan untuk mengingat pura yang ada di Desa Bayung Gede
-                                                (Ngelingang Pura yang ada di Desa Bayung Gede). Menurut penuturan para
+                                                (Ngelingang Pura yang ada di Desa Bayung Gede).</p>
+                                            <p class="main-content d-inline-block text-justify">
+                                                Menurut penuturan para
                                                 tokoh masyarakat, “Penglipuran” secara etimologi dijelaskan sebagai
-                                                berikut.</p>
-                                            <ol>
-                                                <li style="display: list-item">
-                                                    Penglipuran berasal dan kata
-                                                    “pangeling” dan “pura” menjadi kata
-                                                    penglipuran berarti masyarakat penglipuran membangun pura
-                                                    seperti di
-                                                    Bayung Gede untuk mengingat pura di Bayung Gede dan mengingat
-                                                    leluhurnya
-                                                </li>
-                                            </ol>
-                                            <ol>
-                                                <li style="display: list-item">
-                                                    Penglipuran berasal dan kata
-                                                    “pelipur” dan “lara” menjadi
-                                                    penglipuran, berarti penglipuran menjadi tempat menghibur di
-                                                    kala
-                                                    duka (lara) di samping karena penduduk sering dapat menghibur
-                                                    saat
-                                                    raja menghadapi masalah.
-                                                </li>
-                                            </ol>
-                                            <ol>
-                                                <li style="display: list-item">
-                                                    Penglipuran berasal dan kata
-                                                    “pangleng” dan “pura” menjadi
-                                                    penglipuran berärti bahwa barang siapa ke penglipuran akan
-                                                    melewati
-                                                    pura di empat penjuru mata angin yaitu utara, timur, selatan dan
-                                                    barat, dengan kata lain bahwa penglipuran di kelilingi oleh
-                                                    pura-pura.
-                                                </li>
-                                            </ol>
+                                                berikut, Penglipuran berasal dan kata
+                                                “pangeling” dan “pura” menjadi kata
+                                                penglipuran berarti masyarakat penglipuran membangun pura
+                                                seperti di
+                                                Bayung Gede untuk mengingat pura di Bayung Gede dan mengingat
+                                                leluhurnya. Penglipuran berasal dan kata
+                                                “pelipur” dan “lara” menjadi
+                                                penglipuran, berarti penglipuran menjadi tempat menghibur di
+                                                kala
+                                                duka (lara) di samping karena penduduk sering dapat menghibur
+                                                saat
+                                                raja menghadapi masalah. Penglipuran berasal dan kata
+                                                “pangleng” dan “pura” menjadi
+                                                penglipuran berärti bahwa barang siapa ke penglipuran akan
+                                                melewati
+                                                pura di empat penjuru mata angin yaitu utara, timur, selatan dan
+                                                barat, dengan kata lain bahwa penglipuran di kelilingi oleh
+                                                pura-pura.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h1 class="text-center my-5">STRUKTUR PENGELOLA</h1>
+                                    <div class="row my-5">
+                                        <div class="col">
+                                            <div class="mb-5">
+                                                <center>
+                                                    <img src="{{ asset('user/img/penglipuran/struktur-organisasi.png') }}"
+                                                        alt="Sejarah Penglipuran">
+                                                </center>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -233,12 +233,11 @@
 
             {{-- Import Footer --}}
             <!-- Bottom -->
-            <div id=" bottom" class="clearfix has-spacer">
+            <div id="bottom" class="clearfix has-spacer">
                 <div id="bottom-bar-inner" class="container">
                     <div class="bottom-bar-inner-wrap">
                         <div class="d-flex justify-content-center">
-                            <span class="text">Copyright © Desa Penglipuran
-                                2021</span>
+                            <span class="text">Copyright © Desa Penglipuran 2021</span>
                         </div><!-- /.bottom-bar-content -->
                     </div><!-- /.bottom-bar-inner-wrap -->
                 </div><!-- /#bottom-bar-inner -->
