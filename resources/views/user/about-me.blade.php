@@ -143,9 +143,9 @@
                                     <div class="row my-5">
                                         <div class="col-6">
                                             <center>
-                                                <h6 class="mb-5">DOSEN PEMBIMBING 1</h6>
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-3.png') }}"
-                                                    alt="">
+                                                <h6 class="mb-4">DOSEN PEMBIMBING 1</h6>
+                                                <img width="150px" src="{{ asset('user/img/profile/dospem-1.jpg') }}"
+                                                    alt="" class="rounded-circle shadow">
                                                 <h6 class="mt-4">BAGUS MADE SABDA NIRMALA, S.Si., M.Eng
                                                 </h6>
                                             </center>
@@ -158,9 +158,9 @@
                                             </div> --}}
                                         <div class="col-6">
                                             <center>
-                                                <h6 class="mb-5">DOSEN PEMBIMBING 2</h6>
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-2.png') }}"
-                                                    alt="">
+                                                <h6 class="mb-4">DOSEN PEMBIMBING 2</h6>
+                                                <img width="150px" src="{{ asset('user/img/profile/dospem-2.jpg') }}"
+                                                    alt="" class="rounded-circle shadow">
                                                 <h6 class="mt-4">I KOMANG TRY ADI STANAYA, S.Kom., M.Kom
                                                 </h6>
                                             </center>
@@ -169,10 +169,10 @@
                                     <div class="row mb-3">
                                         <div class="col">
                                             <center>
-                                                <h6 class="mb-5">MAHASISWA</h6>
+                                                <h6 class="mb-4">MAHASISWA</h6>
 
-                                                <img width="150px" src="{{ asset('user/icon/Profile/man-1.png') }}"
-                                                    alt="">
+                                                <img width="150px" src="{{ asset('user/img/profile/mahasiswa.jpg') }}"
+                                                    alt="" class="rounded-circle shadow">
                                                 <h6 class="mt-4">IDA BAGUS GDE SUTHA PRAMANA PUTRA</h6>
 
                                             </center>
