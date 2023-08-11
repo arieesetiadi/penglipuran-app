@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2021 at 05:44 AM
+-- Generation Time: Jan 19, 2022 at 07:19 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -41,21 +41,21 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `title`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Penglipuran Festival 2014', '1637577713 2014.jpg', '2021-11-22 10:41:53', NULL),
-(2, 'Penglipuran Festival 2014 - 2', '1637577741 2014.2.jpg', '2021-11-22 10:42:21', NULL),
-(3, 'Penglipuran Festival 2014 - 3', '1637577828 2014.3.jpg', '2021-11-22 10:43:48', NULL),
-(4, 'Penglipuran Festival 2014 - 4', '1637577851 2014.4.jpg', '2021-11-22 10:44:11', NULL),
-(5, 'Penglipuran Festival 2014 - 5', '1637577888 2014.5.jpg', '2021-11-22 10:44:48', NULL),
-(6, 'Penglipuran Festival 2013', '1637577923 2013.jpg', '2021-11-22 10:45:23', NULL),
-(7, 'Penglipuran Festival 2013 - 2', '1637577964 2013.2.jpg', '2021-11-22 10:46:04', NULL),
-(8, 'Penglipuran Festival 2013 - 3', '1637577989 2013.3.jpg', '2021-11-22 10:46:29', NULL),
-(9, 'Penglipuran Festival 2013 - 4', '1637578033 2013.4.jpg', '2021-11-22 10:47:13', NULL),
-(10, 'Penglipuran Festival 2013 - 5', '1637578078 2013.5.jpg', '2021-11-22 10:47:58', NULL),
-(11, 'Kunjungan Pejabat', '1637578098 pejabat.jpg', '2021-11-22 10:48:18', NULL),
-(12, 'Kunjungan Pejabat 2', '1637578110 pejabat2.jpg', '2021-11-22 10:48:30', NULL),
-(13, 'Kunjungan Pejabat 3', '1637578121 pejabat3.jpg', '2021-11-22 10:48:41', NULL),
-(14, 'Kunjungan Pejabat 4', '1637578144 pejabat4.jpg', '2021-11-22 10:49:04', NULL),
-(15, 'Kunjungan Pejabat 5', '1637578156 pejabat5.jpg', '2021-11-22 10:49:16', NULL);
+(1, 'Kunjungan Pejabat e', '1637578156 pejabat5.jpg', '2021-11-22 10:49:16', NULL),
+(2, 'Kunjungan Pejabat d', '1637578144 pejabat4.jpg', '2021-11-22 10:49:04', NULL),
+(3, 'Kunjungan Pejabat c', '1637578121 pejabat3.jpg', '2021-11-22 10:48:41', NULL),
+(4, 'Kunjungan Pejabat b', '1637578110 pejabat2.jpg', '2021-11-22 10:48:30', NULL),
+(5, 'Kunjungan Pejabat a', '1637578098 pejabat.jpg', '2021-11-22 10:48:18', NULL),
+(6, 'Penglipuran Festival 2013 e', '1637578078 2013.5.jpg', '2021-11-22 10:47:58', NULL),
+(7, 'Penglipuran Festival 2013 d', '1637578033 2013.4.jpg', '2021-11-22 10:47:13', NULL),
+(8, 'Penglipuran Festival 2013 c', '1637577989 2013.3.jpg', '2021-11-22 10:46:29', NULL),
+(10, 'Penglipuran Festival 2013 b', '1637577964 2013.2.jpg', '2021-11-22 10:46:04', NULL),
+(11, 'Penglipuran Festival 2013 a', '1637577923 2013.jpg', '2021-11-22 10:45:23', NULL),
+(12, 'Penglipuran Festival 2014 e', '1637577888 2014.5.jpg', '2021-11-22 10:44:48', NULL),
+(13, 'Penglipuran Festival 2014 d', '1637577851 2014.4.jpg', '2021-11-22 10:44:11', NULL),
+(14, 'Penglipuran Festival 2014 c', '1637577828 2014.3.jpg', '2021-11-22 10:43:48', NULL),
+(15, 'Penglipuran Festival 2014 b', '1637577741 2014.2.jpg', '2021-11-22 10:42:21', NULL),
+(16, 'Penglipuran Festival 2014 a', '1637577713 2014.jpg', '2021-11-22 10:41:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -199,7 +199,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -211,7 +211,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
